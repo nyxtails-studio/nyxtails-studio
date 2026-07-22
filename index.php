@@ -15,7 +15,7 @@ $initial = in_array($browser,$supported,true) ? $browser : 'en';
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=8"/>
+<link rel="stylesheet" href="styles.css?v=9"/>
 </head>
 <body>
 <div class="noise" aria-hidden="true"></div>
@@ -103,6 +103,6 @@ $initial = in_array($browser,$supported,true) ? $browser : 'en';
 <footer class="footer"><div class="shell footer-top"><a class="brand" href="#top"><svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true"><path d="M30.9 5.7c-7.6 2.1-12.8 9-12.1 16.8.8 8.8 8.5 15.3 17.3 14.5 2-.2 3.9-.8 5.6-1.7-2.8 5.3-8.4 8.9-14.8 8.9-9.3 0-16.8-7.5-16.8-16.8 0-9.2 7.4-16.7 16.5-16.8 1.5 0 2.9.2 4.3.6Z" fill="none" stroke="currentColor" stroke-width="1.35"/><path d="M9.4 39.8c7.2-8.4 13.7-12.7 19.6-13 5.8-.3 9.3 1.8 10.5 6.5-4.7-2.6-8.5-2.5-11.4.1-3.8 3.4-8.2 5.5-13.3 6.3 1.7-1.9 3-3.8 3.8-5.7-2.8 2.2-5.9 4-9.2 5.8Z" fill="none" stroke="#b65bff" stroke-width="1.35"/><circle cx="9.2" cy="10.3" r="1.4" fill="#00f0ff"/><circle cx="38.4" cy="12.2" r="1" fill="#00f0ff"/></svg><span class="brand-text"><strong>NYXTAILS</strong><em>STUDIO</em></span></a><div class="footer-tag" data-i18n="footer.tagline">Weaving darkness into worlds.</div><a class="footer-top-link" href="#top">↑ <span data-i18n="footer.backTop">Back to top</span></a></div><div class="shell footer-bottom"><span>© 2026 Nyxtails Studio</span><span data-i18n="footer.made">Made with obsession</span><div class="footer-links"><a href="https://www.linkedin.com/company/nyxtails-studio/" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://github.com/nyxtails-studio" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.youtube.com/@nyxtails-studio" target="_blank" rel="noreferrer">YouTube</a><a href="mailto:nyxtails.studio@gmail.com">Email</a></div></div></footer>
 
 <script>window.NYXT_INITIAL_LANG = <?= json_encode($initial, JSON_UNESCAPED_UNICODE) ?>;</script>
-<script src="script.js?v=8"></script>
+<script src="script.js?v=9"></script>
 </body>
 </html>
