@@ -1,297 +1,189 @@
 document.documentElement.classList.add('js');
-
-const copy = {
-  en: {
-    nav: { games: 'Games', studio: 'Studio', journal: 'Journal', careers: 'Careers', contact: 'Contact' },
-    hero: {
-      eyebrow: 'Independent game studio · Worldwide', lineOne: 'Weaving', lineTwo: 'darkness', lineThree: 'into worlds.',
-      description: 'We create atmospheric, story-driven games for the feelings that stay after the screen goes dark.',
-      ctaGames: 'Explore our games', ctaStudio: 'Meet the studio', sideNote: 'For the curious.<br>For the brave.<br>For the ones<br>who look closer.',
-      metaOneLabel: 'Current signal', metaOneValue: '01 / In the making', metaTwoLabel: 'Audience', metaTwoValue: 'Worldwide', metaThreeLabel: 'Est.', scroll: 'Scroll to descend', languageLabel: 'Language'
-    },
-    games: {
-      eyebrow: 'The worlds are calling', title: 'Games<br><em>with a pulse.</em>', intro: 'We build places you can get lost in — then give you a reason to find your way back.',
-      frameLabel: 'Selected worlds / 04', frameHint: 'Hover a project to choose its destination', frameFoot: 'Each world has its own door.', launchLabel: 'Open project', launchPrompt: 'Choose a destination', websiteOption: 'Official site', steamOption: 'Steam',
-      cardOne: { status: 'In development', kicker: 'Co-op survival horror · Unreal Engine 5', description: 'The quota is simple. The place is not. Scavenge an endless architecture with your crew, turn impossible junk into a living business, and keep the dark from balancing the books.', websiteCta: 'Enter the game site', steamCta: 'Wishlist on Steam', fallbackCta: 'Official site · Steam page soon', tags: '6 players · Early access · 2026' },
-      cardTwo: { status: 'In development', kicker: 'Social deduction · Office chaos · Co-op', description: 'Fill documents. Listen to phones. Decide who deserves your trust. In Zaisen Corp., every round is a new office rumour with a score attached.', websiteCta: 'Enter the game site', steamCta: 'Steam page coming soon', fallbackCta: 'Official site · Steam page soon', tags: '2–8 employees · Social deduction' },
-      cardThree: { status: 'Building the collection', kicker: 'Co-op shop management · TCG simulator', description: 'Open a tiny figure shop, chase impossible pulls, ride a living market, and build a collection worth showing off — together or on your own terms.', websiteCta: 'Explore the project', steamCta: 'Steam page coming soon', fallbackCta: 'Official site · Steam page soon', tags: '1–4 players · Collection sim' },
-      cardFour: { status: 'A secret taking shape', kicker: 'Narrative dark fantasy · Original IP', description: 'Some stories are not told in daylight. A first glimpse into a myth we are building from shadow, memory, and the softest kind of danger.', websiteCta: 'Keep me close', steamCta: 'Steam page coming soon', fallbackCta: 'Official site · Steam page soon', tags: 'Original IP · Early concept' },
-      tail: 'Four worlds in the dark. More signals soon.'
-    },
-    studio: {
-      eyebrow: 'A small studio with a long shadow', title: 'Made in the<br><em>quiet hours.</em>', intro: 'Nyx is the night before the story begins. That is where we like to work.',
-      quote: 'The dark is not empty.<br><em>It is where everything begins.</em>', quoteCredit: '— Nyxtails studio note / 001',
-      storyLead: 'We are Nyxtails Studio, an independent team building games for the space between fear and wonder.',
-      storyBodyOne: 'Our name is a meeting of opposites: Nyx, the ancient night, and the fox — clever, restless, impossible to fully catch. It is a reminder that atmosphere can be a character, that a quiet hallway can say more than a thousand words, and that the best stories follow you home.',
-      storyBodyTwo: 'We make worlds with texture. Stories with teeth. Experiences that respect your time, then stay in your head long after you have put the controller down.', cta: 'Come a little closer', principlesLabel: 'The way we make',
-      principleOneTitle: 'Atmosphere<br><em>first.</em>', principleOneBody: 'Every light, silence, and distant sound earns its place. Mood is not decoration — it is the language.',
-      principleTwoTitle: 'Stories<br><em>with teeth.</em>', principleTwoBody: 'We are drawn to the complicated bits: flawed people, difficult choices, and feelings that refuse a neat ending.',
-      principleThreeTitle: 'Craft over<br><em>noise.</em>', principleThreeBody: 'Small teams let us stay close to the work. We polish the detail you may never name, but will always feel.'
-    },
-    team: {
-      eyebrow: 'The people behind the signal', title: 'The tails<br><em>behind Nyxtails.</em>', intro: 'Three founders, one shared obsession: making the invisible feel real.',
-      melihRole: 'Co-founder · Creative direction', ahmetRole: 'Co-founder · Technology & production', talhaRole: 'Co-founder · Game development', note: 'Built with obsession,<br><em>felt everywhere.</em>', companyLink: 'Meet us on LinkedIn'
-    },
-    journal: {
-      eyebrow: 'Notes from the dark', title: 'The<br><em>journal.</em>', allCta: 'All transmissions', featureType: 'Development log / film 01', featureTitle: 'What waits<br><em>between the rooms?</em>', featureBody: 'A first look at the systems, sounds, and unsettling little rules behind Backrooms Manager — Together.', watch: 'Watch on YouTube',
-      itemOneType: 'Devlog', itemOneTitle: 'Building tension<br>one sound at a time', itemOneBody: 'Why silence is the most expensive tool in our kit.', itemTwoType: 'Open notebook', itemTwoTitle: 'A small team<br>in a very big maze', itemTwoBody: 'Tools, experiments, and the things we leave on GitHub.', itemThreeType: 'Studio note', itemThreeTitle: 'Built to be felt,<br>not explained', itemThreeBody: 'The place we start from, and the worlds we want to share.', follow: 'Follow the trail'
-    },
-    careers: { eyebrow: 'Leave the light on', title: 'There is room<br><em>for your shadow.</em>', body: 'We are not hiring for a checklist. We are looking for curious people who care about the last 1% — the strange detail that makes a world breathe.', cta: 'Start a conversation' },
-    contact: { eyebrow: 'Open frequency', title: 'Have a story<br><em>worth getting lost in?</em>', body: 'Tell us the thought you cannot shake. We read every signal.' },
-    footer: { tagline: 'Weaving darkness into worlds.', backTop: 'Back to top', made: 'Made with obsession', locale: 'Global / Independent' }
+const copy={
+  en:{
+    nav:{games:'Games',studio:'Studio',team:'Team',journal:'Journal',contact:'Contact'},
+    hero:{eyebrow:'Independent game studio — TR / EN / JP',lineOne:'Weaving',lineTwo:'darkness',lineThree:'into worlds.',description:'Atmospheric, story-driven games for the feelings that stay after the screen goes dark.',ctaGames:'Explore our games',ctaStudio:'Meet the studio',sideNote:'For the curious.<br>For the brave.<br>For the ones who look closer.',metaOneLabel:'Current signal',metaOneValue:'01 / In the making',metaTwoLabel:'Focus',metaTwoValue:'Atmospheric horror & co-op',scroll:'Scroll to descend'},
+    games:{eyebrow:'The worlds are calling',title:'Games with a pulse.',intro:'We build places you can get lost in — then give you a reason to find your way back.',filterLabel:'OPEN GAMES',tabAll:'OFFICIAL SITE',tabSteam:'STEAM',websiteOption:'Official Site',tail:'Four worlds in the dark. More signals soon.',nocturne:{badge:'IN DEVELOPMENT',subtitle:'Atmospheric Story · Single Player'},backrooms:{badge:'EARLY ACCESS · JUL 2026',subtitle:'6-Player Co-op Survival Horror'},filecopy:{badge:'PROTOTYPE · DEMO',subtitle:'Social Deduction · Office Chaos'},cozymint:{badge:'IN DEVELOPMENT',subtitle:'Figure & TCG Simulator'}},
+    studio:{eyebrow:'A small studio with a long shadow',title:'Made in the quiet hours.',intro:'Nyx is the night before the story begins.',quote:'The dark is not empty. It is where everything begins.',quoteCredit:'— Nyxtails studio note / 001',storyLead:'We are Nyxtails Studio, an independent team.',storyBodyOne:'Our name is a meeting of opposites: Nyx and the fox.',storyBodyTwo:'We make worlds with texture. Stories with teeth.',cta:'Come a little closer',principlesLabel:'The way we make',principleOneTitle:'Atmosphere first.',principleOneBody:'Every light, silence, and distant sound earns its place.',principleTwoTitle:'Stories with teeth.',principleTwoBody:'Flawed people, difficult choices.',principleThreeTitle:'Craft over noise.',principleThreeBody:'Small teams stay close to the work.'},
+    team:{eyebrow:'The people behind the signal',title:'The tails behind Nyxtails.',intro:'Three founders, one obsession.',melihRole:'Co-founder · Creative direction',ahmetRole:'Co-founder · Technology & production',talhaRole:'Co-founder · Game development',note:'Built with obsession, felt everywhere.',companyLink:'Meet us on LinkedIn'},
+    journal:{eyebrow:'Notes from the dark',title:'The journal.',allCta:'All transmissions',featureType:'Development log / film 01',featureTitle:'What waits between the rooms?',featureBody:'A first look at systems, sounds, and unsettling little rules.',watch:'Watch on YouTube',itemOneType:'Devlog',itemOneTitle:'Building tension one sound at a time',itemOneBody:'Why silence is the most expensive tool.',itemTwoType:'Open notebook',itemTwoTitle:'A small team in a very big maze',itemTwoBody:'Tools, experiments, things we leave on GitHub.',itemThreeType:'Studio note',itemThreeTitle:'Built to be felt, not explained',itemThreeBody:'The place we start from, and worlds we share.',follow:'Follow the trail'},
+    careers:{eyebrow:'Leave the light on',title:'There is room for your shadow.',body:'Not hiring for a checklist. Looking for curious people.',cta:'Start a conversation'},
+    contact:{eyebrow:'Open frequency',title:'Have a story worth getting lost in?',body:'Tell us the thought you cannot shake.'},
+    footer:{tagline:'Weaving darkness into worlds.',backTop:'Back to top',made:'Made with obsession'}
   },
-  tr: {
-    nav: { games: 'Oyunlar', studio: 'Stüdyo', journal: 'Günlük', careers: 'Kariyer', contact: 'İletişim' },
-    hero: {
-      eyebrow: 'Bağımsız oyun stüdyosu · Dünya çapında', lineOne: 'Karanlığı', lineTwo: 'dünyalara', lineThree: 'işliyoruz.',
-      description: 'Ekran karardıktan sonra bile içinizde kalan hisler için atmosferik, hikâye odaklı oyunlar yaratıyoruz.',
-      ctaGames: 'Oyunlarımızı keşfet', ctaStudio: 'Stüdyoyla tanış', sideNote: 'Merak edenler için.<br>Cesur olanlar için.<br>Daha yakından<br>bakanlar için.',
-      metaOneLabel: 'Güncel sinyal', metaOneValue: '01 / Üretim aşamasında', metaTwoLabel: 'Kitle', metaTwoValue: 'Dünya çapında', metaThreeLabel: 'Kuruluş', scroll: 'Aşağıya in', languageLabel: 'Dil'
-    },
-    games: {
-      eyebrow: 'Dünyalar çağırıyor', title: 'İçinde hayat<br><em>atan oyunlar.</em>', intro: 'Kaybolabileceğiniz yerler inşa ediyoruz — sonra size geri dönmek için bir sebep veriyoruz.',
-      frameLabel: 'Seçili dünyalar / 04', frameHint: 'Hedefi seçmek için projenin üzerine gel', frameFoot: 'Her dünyanın kendine ait bir kapısı var.', launchLabel: 'Projeyi aç', launchPrompt: 'Bir hedef seç', websiteOption: 'Resmî site', steamOption: 'Steam',
-      cardOne: { status: 'Geliştirme aşamasında', kicker: 'Birlikte hayatta kalma korkusu · Unreal Engine 5', description: 'Kota basit. Mekân değil. Ekibinle sonsuz mimaride ganimet topla, imkânsız hurdaları yaşayan bir işletmeye dönüştür ve karanlığın hesapları dengelemesine izin verme.', websiteCta: 'Oyun sitesine gir', steamCta: 'Steam’de istek listesine ekle', fallbackCta: 'Resmî site · Steam sayfası yakında', tags: '6 oyuncu · Erken erişim · 2026' },
-      cardTwo: { status: 'Geliştirme aşamasında', kicker: 'Sosyal dedüksiyon · Ofis kaosu · Co-op', description: 'Belgeleri doldur. Telefonları dinle. Kime güveneceğine karar ver. Zaisen Corp.’ta her tur, puana dönüşen yeni bir ofis söylentisi.', websiteCta: 'Oyun sitesine gir', steamCta: 'Steam sayfası yakında', fallbackCta: 'Resmî site · Steam sayfası yakında', tags: '2–8 çalışan · Sosyal dedüksiyon' },
-      cardThree: { status: 'Koleksiyon kuruluyor', kicker: 'Co-op dükkân yönetimi · TCG simülatörü', description: 'Küçük bir figür dükkânı aç, imkânsız kutuları kovala, yaşayan piyasayı yönet ve birlikte ya da kendi kurallarınla sergilenmeye değer bir koleksiyon kur.', websiteCta: 'Projeyi keşfet', steamCta: 'Steam sayfası yakında', fallbackCta: 'Resmî site · Steam sayfası yakında', tags: '1–4 oyuncu · Koleksiyon simülasyonu' },
-      cardFour: { status: 'Şekillenen bir sır', kicker: 'Anlatı odaklı karanlık fantezi · Özgün IP', description: 'Bazı hikâyeler gün ışığında anlatılmaz. Gölgeden, hafızadan ve en yumuşak tehlike biçiminden kurduğumuz bir mite ilk bakış.', websiteCta: 'Beni haberdar et', steamCta: 'Steam sayfası yakında', fallbackCta: 'Resmî site · Steam sayfası yakında', tags: 'Özgün IP · Erken konsept' },
-      tail: 'Karanlıkta dört dünya. Yakında daha fazla sinyal.'
-    },
-    studio: {
-      eyebrow: 'Uzun gölgeli küçük bir stüdyo', title: 'Sessiz<br><em>saatlerde.</em>', intro: 'Nyx, hikâye başlamadan önceki gecedir. Biz çalışmayı orada seviyoruz.',
-      quote: 'Karanlık boş değildir.<br><em>Her şey orada başlar.</em>', quoteCredit: '— Nyxtails stüdyo notu / 001',
-      storyLead: 'Biz Nyxtails Studio’yuz; korku ile hayranlık arasındaki boşluk için oyunlar yapan, bağımsız bir ekibiz.',
-      storyBodyOne: 'İsmimiz iki zıtlığın buluşması: kadim gece Nyx ve tilki — zeki, huzursuz, tamamen yakalanması imkânsız. Bu bize atmosferin bir karakter olabileceğini, sessiz bir koridorun bin kelimeden fazlasını anlatabileceğini ve en iyi hikâyelerin eve kadar sizinle geldiğini hatırlatıyor.',
-      storyBodyTwo: 'Dokusunu hissedebileceğiniz dünyalar yapıyoruz. Dişleri olan hikâyeler. Zamanınıza saygı duyan, kumandayı bıraktıktan çok sonra bile zihninizde kalan deneyimler.', cta: 'Biraz daha yaklaş', principlesLabel: 'Üretme biçimimiz',
-      principleOneTitle: 'Önce<br><em>atmosfer.</em>', principleOneBody: 'Her ışık, sessizlik ve uzaktan gelen ses yerini hak eder. Hâl, dekorasyon değil — dilin kendisidir.',
-      principleTwoTitle: 'Dişleri olan<br><em>hikâyeler.</em>', principleTwoBody: 'Karmaşık anlara çekiliyoruz: kusurlu insanlar, zor seçimler ve kolay bir sonu reddeden duygular.',
-      principleThreeTitle: 'Gürültü değil,<br><em>zanaat.</em>', principleThreeBody: 'Küçük ekipler işe yakın kalmamızı sağlıyor. Belki adını koyamayacağınız ama her zaman hissedeceğiniz detayı parlatıyoruz.'
-    },
-    team: {
-      eyebrow: 'Sinyalin ardındaki insanlar', title: 'Nyxtails’in<br><em>ardındaki kuyruklar.</em>', intro: 'Üç kurucu, tek bir ortak takıntı: görünmeyeni gerçek hissettirmek.',
-      melihRole: 'Kurucu ortak · Yaratıcı yönetim', ahmetRole: 'Kurucu ortak · Teknoloji ve prodüksiyon', talhaRole: 'Kurucu ortak · Oyun geliştirme', note: 'Tutkuyla üretildi,<br><em>her yerde hissedildi.</em>', companyLink: 'LinkedIn’de tanışalım'
-    },
-    journal: {
-      eyebrow: 'Karanlıktan notlar', title: 'Stüdyo<br><em>günlüğü.</em>', allCta: 'Tüm aktarımlar', featureType: 'Geliştirme günlüğü / film 01', featureTitle: 'Odaların<br><em>arasında ne bekliyor?</em>', featureBody: 'Backrooms Manager — Together’ın sistemlerine, seslerine ve huzursuz edici küçük kurallarına ilk bakış.', watch: 'YouTube’da izle',
-      itemOneType: 'Geliştirme günlüğü', itemOneTitle: 'Gerilimi her sesle<br>biraz daha kurmak', itemOneBody: 'Sessizliğin alet çantamızdaki en pahalı araç oluşu.', itemTwoType: 'Açık defter', itemTwoTitle: 'Küçük bir ekip,<br>çok büyük bir labirent', itemTwoBody: 'Araçlar, deneyler ve GitHub’da bıraktıklarımız.', itemThreeType: 'Stüdyo notu', itemThreeTitle: 'Gölgeden,<br>duyguyla', itemThreeBody: 'Başladığımız yer ve paylaşmak istediğimiz dünyalar.', follow: 'İzi takip et'
-    },
-    careers: { eyebrow: 'Işığı açık bırak', title: 'Gölgen için<br><em>yer var.</em>', body: 'Bir kontrol listesi için işe almıyoruz. Bir dünyayı nefes alır hâle getiren o tuhaf ayrıntıyı önemseyen, meraklı insanlar arıyoruz.', cta: 'Bir sohbet başlatalım' },
-    contact: { eyebrow: 'Açık frekans', title: 'Kaybolmaya<br><em>değer bir hikâyen mi var?</em>', body: 'Aklından çıkaramadığın düşünceyi bize anlat. Her sinyali okuyoruz.' },
-    footer: { tagline: 'Karanlığı dünyalara işliyoruz.', backTop: 'Başa dön', made: 'Tutkuyla yapıldı', locale: 'Dünya / Bağımsız' }
+  tr:{
+    nav:{games:'Oyunlar',studio:'Stüdyo',team:'Ekip',journal:'Günlük',contact:'İletişim'},
+    hero:{eyebrow:'Bağımsız oyun stüdyosu — TR / EN / JP',lineOne:'Karanlığı',lineTwo:'dünyalara',lineThree:'işliyoruz.',description:'Ekran karardıktan sonra bile içinizde kalan hisler için atmosferik, hikâye odaklı oyunlar.',ctaGames:'Oyunlarımızı keşfet',ctaStudio:'Stüdyoyla tanış',sideNote:'Merak edenler için.<br>Cesur olanlar için.<br>Daha yakından bakanlar için.',metaOneLabel:'Güncel sinyal',metaOneValue:'01 / Üretim aşamasında',metaTwoLabel:'Odak',metaTwoValue:'Atmosferik korku & co-op',scroll:'Aşağıya in'},
+    games:{eyebrow:'Dünyalar çağırıyor',title:'İçinde hayat atan oyunlar.',intro:'Kaybolabileceğiniz yerler inşa ediyoruz.',filterLabel:'OYUNLARI AÇ',tabAll:'RESMİ SİTE',tabSteam:'STEAM',websiteOption:'Resmi Site',tail:'Karanlıkta dört dünya. Yakında daha fazla sinyal.',nocturne:{badge:'GELİŞTİRME AŞAMASINDA',subtitle:'Atmosferik Hikâye · Tek Oyuncu'},backrooms:{badge:'ERKEN ERİŞİM · TEM 2026',subtitle:'6 Oyunculu İşbirliği Hayatta Kalma Korku'},filecopy:{badge:'PROTOTİP · DEMO',subtitle:'Sosyal Dedüksiyon · Ofis Kaosu'},cozymint:{badge:'GELİŞTİRME AŞAMASINDA',subtitle:'Figür & TCG Simülatörü'}},
+    studio:{eyebrow:'Uzun gölgeli küçük bir stüdyo',title:'Sessiz saatlerde.',intro:'Nyx, hikâye başlamadan önceki gecedir.',quote:'Karanlık boş değildir. Her şey orada başlar.',quoteCredit:'— Nyxtails stüdyo notu / 001',storyLead:'Biz Nyxtails Studio’yuz.',storyBodyOne:'İsmimiz iki zıtlığın buluşması.',storyBodyTwo:'Dokusunu hissedeceğiniz dünyalar yapıyoruz.',cta:'Biraz daha yaklaş',principlesLabel:'Üretme biçimimiz',principleOneTitle:'Önce atmosfer.',principleOneBody:'Her ışık, sessizlik yerini hak eder.',principleTwoTitle:'Dişleri olan hikâyeler.',principleTwoBody:'Kusurlu insanlar, zor seçimler.',principleThreeTitle:'Gürültü değil, zanaat.',principleThreeBody:'Küçük ekipler işe yakın kalır.'},
+    team:{eyebrow:'Sinyalin ardındaki insanlar',title:'Nyxtails’in ardındaki kuyruklar.',intro:'Üç kurucu, tek takıntı.',melihRole:'Kurucu ortak · Yaratıcı yönetim',ahmetRole:'Kurucu ortak · Teknoloji ve prodüksiyon',talhaRole:'Kurucu ortak · Oyun geliştirme',note:'Tutkuyla üretildi, her yerde hissedildi.',companyLink:'LinkedIn’de tanışalım'},
+    journal:{eyebrow:'Karanlıktan notlar',title:'Stüdyo günlüğü.',allCta:'Tüm aktarımlar',featureType:'Geliştirme günlüğü / film 01',featureTitle:'Odaların arasında ne bekliyor?',featureBody:'Backrooms Manager — Together’ın sistemlerine ilk bakış.',watch:'YouTube’da izle',itemOneType:'Geliştirme günlüğü',itemOneTitle:'Gerilimi her sesle kurmak',itemOneBody:'Sessizliğin en pahalı araç oluşu.',itemTwoType:'Açık defter',itemTwoTitle:'Küçük bir ekip, çok büyük bir labirent',itemTwoBody:'Araçlar ve GitHub’da bıraktıklarımız.',itemThreeType:'Stüdyo notu',itemThreeTitle:'Gölgeden, duyguyla',itemThreeBody:'Başladığımız yer ve dünyalar.',follow:'İzi takip et'},
+    careers:{eyebrow:'Işığı açık bırak',title:'Gölgen için yer var.',body:'Kontrol listesi için işe almıyoruz.',cta:'Bir sohbet başlatalım'},
+    contact:{eyebrow:'Açık frekans',title:'Kaybolmaya değer bir hikâyen mi var?',body:'Aklından çıkaramadığın düşünceyi anlat.'},
+    footer:{tagline:'Karanlığı dünyalara işliyoruz.',backTop:'Başa dön',made:'Tutkuyla yapıldı'}
+  },
+  ja:{
+    nav:{games:'ゲーム',studio:'スタジオ',team:'チーム',journal:'ジャーナル',contact:'お問い合わせ'},
+    hero:{eyebrow:'インディーゲームスタジオ — TR / EN / 日本語',lineOne:'闇を',lineTwo:'世界に',lineThree:'織り込む。',description:'画面が暗くなったあとも心に残る、雰囲気と物語重視のゲームを作っています。',ctaGames:'ゲームを見る',ctaStudio:'スタジオを知る',sideNote:'好奇心のある人へ。<br>勇気ある人へ。<br>もっと近くで見つめる人へ。',metaOneLabel:'現在のシグナル',metaOneValue:'01 / 制作中',metaTwoLabel:'フォーカス',metaTwoValue:'雰囲気ホラー & Co-op',scroll:'スクロールして降りる'},
+    games:{eyebrow:'世界が呼んでいる',title:'鼓動するゲームたち。',intro:'迷い込める場所を作り、そして戻ってくる理由を与える。',filterLabel:'ゲームを開く',tabAll:'公式サイト',tabSteam:'STEAM',websiteOption:'公式サイト',tail:'暗闇に4つの世界。さらなるシグナルは近日中に。',nocturne:{badge:'開発中',subtitle:'雰囲気重視ストーリー・シングルプレイヤー'},backrooms:{badge:'早期アクセス・2026年7月',subtitle:'6人協力サバイバルホラー'},filecopy:{badge:'プロトタイプ・デモ',subtitle:'社会的推理・オフィスカオス'},cozymint:{badge:'開発中',subtitle:'フィギュア & TCGシミュレーター'}},
+    studio:{eyebrow:'長い影を持つ小さなスタジオ',title:'静かな時間に作られた。',intro:'Nyxは物語が始まる前の夜。私たちはそこで働くのが好きだ。',quote:'暗闇は空ではない。すべてはそこから始まる。',quoteCredit:'— Nyxtails スタジオノート / 001',storyLead:'私たちはNyxtails Studio。恐怖と驚きの狭間でゲームを作るチーム。',storyBodyOne:'名前は対極の出会い。Nyx、古代の夜、そして狐。',storyBodyTwo:'手触りのある世界、牙のある物語を作ります。',cta:'もっと近づく',principlesLabel:'私たちの作り方',principleOneTitle:'まずは雰囲気。',principleOneBody:'すべての光、沈黙、音が居場所を得る。',principleTwoTitle:'牙のある物語。',principleTwoBody:'不完全な人々、難しい選択。',principleThreeTitle:'ノイズよりクラフト。',principleThreeBody:'小さなチームだから仕事に近づける。'},
+    team:{eyebrow:'シグナルの裏にいる人々',title:'Nyxtailsの裏の尻尾たち。',intro:'3人の創業者、1つの執着。',melihRole:'共同創業者・クリエイティブ',ahmetRole:'共同創業者・テクノロジー',talhaRole:'共同創業者・ゲーム開発',note:'執着で作られ、至る所で感じられる。',companyLink:'LinkedInで会う'},
+    journal:{eyebrow:'暗闇からのノート',title:'ジャーナル。',allCta:'全ての通信',featureType:'開発ログ / フィルム01',featureTitle:'部屋の間に何が待つ？',featureBody:'Backrooms Managerのシステムと音の初公開。',watch:'YouTubeで見る',itemOneType:'開発ログ',itemOneTitle:'緊張感を音で作る',itemOneBody:'沈黙が最も高価な道具な理由。',itemTwoType:'オープンノート',itemTwoTitle:'小さなチーム、巨大な迷路',itemTwoBody:'ツールとGitHubに残すもの。',itemThreeType:'スタジオノート',itemThreeTitle:'感じられるために作る',itemThreeBody:'原点と共有したい世界。',follow:'痕跡を追う'},
+    careers:{eyebrow:'明かりをつけたままに',title:'あなたの影の居場所がある。',body:'チェックリストのためではない。最後の1%にこだわる好奇心ある人を探している。',cta:'会話を始める'},
+    contact:{eyebrow:'開かれた周波数',title:'迷い込む価値のある物語はある？',body:'頭から離れない考えを教えてください。'},
+    footer:{tagline:'暗闇を世界に織り込む。',backTop:'トップへ戻る',made:'執着を込めて作られた'}
   }
 };
 
-let currentLanguage = localStorage.getItem('nyxtails-language') || window.NYXT_INITIAL_LANGUAGE || 'en';
-let languageSwitchTimer;
-
-function getCopy(key) {
-  return key.split('.').reduce((result, part) => result && result[part], copy[currentLanguage]);
-}
-
-function renderLanguage(language) {
-  currentLanguage = language;
-  localStorage.setItem('nyxtails-language', language);
-  document.documentElement.lang = language;
-  document.querySelectorAll('[data-i18n]').forEach((element) => {
-    const value = getCopy(element.dataset.i18n);
-    if (value !== undefined) element.innerHTML = value;
+let currentLang = localStorage.getItem('nyxtails-lang') || window.NYXT_INITIAL_LANG || 'en';
+let switchTimer=null;
+function t(p){return p.split('.').reduce((a,c)=>a&&a[c], copy[currentLang]);}
+function renderLang(lang){
+  if(!copy[lang]) return;
+  currentLang=lang;
+  localStorage.setItem('nyxtails-lang', lang);
+  document.documentElement.lang=lang;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const v=t(el.dataset.i18n);
+    if(v!==undefined) el.innerHTML=v;
   });
-  document.querySelectorAll('[data-lang]').forEach((button) => {
-    button.classList.toggle('is-active', button.dataset.lang === language);
-    button.setAttribute('aria-pressed', button.dataset.lang === language ? 'true' : 'false');
-  });
-  const description = document.querySelector('meta[name="description"]');
-  if (description) description.content = language === 'tr'
-    ? 'Nyxtails Studio — Karanlığı dünyalara işliyoruz. Atmosferik, hikâye odaklı deneyimler yaratan bağımsız oyun stüdyosu.'
-    : 'Nyxtails Studio — weaving darkness into worlds. An independent game studio creating atmospheric, story-driven experiences.';
-  document.title = language === 'tr' ? 'Nyxtails Studio — Karanlığı Dünyalara İşliyoruz' : 'Nyxtails Studio — Weaving Darkness Into Worlds';
-  syncProjectLinks();
+  document.querySelectorAll('[data-lang]').forEach(btn=>btn.classList.toggle('is-active', btn.dataset.lang===lang));
+  document.title = lang==='ja' ? 'Nyxtails Studio — 闇を世界に織り込む' : lang==='tr' ? 'Nyxtails Studio — Karanlığı Dünyalara İşliyoruz' : 'Nyxtails Studio — Weaving Darkness Into Worlds';
+  syncTiles();
 }
-
-function applyLanguage(language) {
-  if (!copy[language]) return;
-  const isChange = currentLanguage !== language && document.readyState !== 'loading';
-  currentLanguage = language;
-  clearTimeout(languageSwitchTimer);
-  if (!isChange) {
-    renderLanguage(language);
-    return;
-  }
-  document.documentElement.classList.add('is-language-switching');
-  languageSwitchTimer = window.setTimeout(() => {
-    renderLanguage(language);
-    window.setTimeout(() => document.documentElement.classList.remove('is-language-switching'), 460);
-  }, 130);
+function applyLang(lang){
+  if(!copy[lang]) return;
+  if(lang===currentLang && document.body.classList.contains('is-ready')){ renderLang(lang); return; }
+  clearTimeout(switchTimer);
+  if(!document.body.classList.contains('is-ready')){ renderLang(lang); return; }
+  document.documentElement.classList.add('is-switching');
+  switchTimer=setTimeout(()=>{
+    renderLang(lang);
+    setTimeout(()=>document.documentElement.classList.remove('is-switching'), 480);
+  }, 170);
 }
-
-function syncProjectLinks() {
-  document.querySelectorAll('[data-game]').forEach((card) => {
-    const siteLink = card.querySelector('[data-site-link]');
-    const steamLink = card.querySelector('[data-steam-link]');
-    if (siteLink) siteLink.href = card.dataset.website;
-    if (!steamLink) return;
-    if (card.dataset.steam) {
-      steamLink.hidden = false;
-      steamLink.href = card.dataset.steam;
-      steamLink.removeAttribute('aria-disabled');
-      steamLink.tabIndex = 0;
-    } else {
-      steamLink.hidden = true;
-      steamLink.removeAttribute('href');
-      steamLink.setAttribute('aria-disabled', 'true');
-      steamLink.tabIndex = -1;
-    }
+function syncTiles(){
+  document.querySelectorAll('[data-game]').forEach(tile=>{
+    const site=tile.querySelector('[data-site-link]');
+    const steam=tile.querySelector('[data-steam-link]');
+    if(site) site.href=tile.dataset.website||'#';
+    if(!steam) return;
+    if(tile.dataset.steam){ steam.href=tile.dataset.steam; steam.classList.remove('is-disabled'); }
+    else { steam.classList.add('is-disabled'); steam.removeAttribute('href'); }
   });
 }
-
-function setupLaunchMenus() {
-  document.querySelectorAll('[data-launch-toggle]').forEach((trigger) => {
-    trigger.addEventListener('click', (event) => {
-      event.stopPropagation();
-      const launch = trigger.closest('.project-launch');
-      const open = !launch.classList.contains('is-open');
-      document.querySelectorAll('.project-launch.is-open').forEach((item) => {
-        item.classList.remove('is-open');
-        item.querySelector('[data-launch-toggle]')?.setAttribute('aria-expanded', 'false');
+function setupFilters(){
+  const tabs=document.querySelectorAll('[data-filter]');
+  const tiles=document.querySelectorAll('.game-tile');
+  tabs.forEach(tab=>{
+    tab.addEventListener('click', ()=>{
+      const f=tab.dataset.filter;
+      tabs.forEach(t=>{ t.classList.toggle('is-active', t===tab); t.setAttribute('aria-selected', t===tab?'true':'false'); });
+      tiles.forEach(tile=>{
+        const hasSteam=tile.dataset.hasSteam==='1';
+        if(f==='all') tile.classList.remove('is-hidden');
+        else if(f==='steam') tile.classList.toggle('is-hidden', !hasSteam);
+        else tile.classList.remove('is-hidden');
       });
-      launch.classList.toggle('is-open', open);
-      trigger.setAttribute('aria-expanded', String(open));
-    });
-  });
-  document.addEventListener('click', () => {
-    document.querySelectorAll('.project-launch.is-open').forEach((item) => {
-      item.classList.remove('is-open');
-      item.querySelector('[data-launch-toggle]')?.setAttribute('aria-expanded', 'false');
     });
   });
 }
-
-function setupLanguageGate() {
-  const gate = document.querySelector('#language-gate');
-  if (!gate) return;
-  const hasChosenLanguage = localStorage.getItem('nyxtails-language-gate-v2') === 'seen';
-  if (hasChosenLanguage) {
-    gate.classList.add('is-hidden');
-    return;
-  }
+function setupGate(){
+  const gate=document.getElementById('language-gate');
+  if(!gate) return;
+  if(localStorage.getItem('nyxtails-gate-v4')==='seen'){ gate.classList.add('is-hidden'); return; }
   document.body.classList.add('gate-open');
-  gate.setAttribute('aria-hidden', 'false');
-  gate.querySelectorAll('[data-gate-language]').forEach((button) => {
-    button.addEventListener('click', () => {
-      const language = button.dataset.gateLanguage;
-      if (!copy[language]) return;
-      renderLanguage(language);
-      localStorage.setItem('nyxtails-language-gate-v2', 'seen');
+  gate.setAttribute('aria-hidden','false');
+  gate.querySelectorAll('[data-gate-lang]').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const l=btn.dataset.gateLang;
+      if(!copy[l]) return;
+      renderLang(l);
+      localStorage.setItem('nyxtails-gate-v4','seen');
       gate.classList.add('is-leaving');
       document.body.classList.remove('gate-open');
-      window.setTimeout(() => {
-        gate.classList.add('is-hidden');
-        gate.setAttribute('aria-hidden', 'true');
-      }, 650);
+      setTimeout(()=>{ gate.classList.add('is-hidden'); gate.setAttribute('aria-hidden','true'); document.body.classList.add('is-ready'); }, 600);
     });
   });
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-  applyLanguage(currentLanguage);
-
-  // Header state and mobile navigation.
-  const header = document.querySelector('.site-header');
-  const menuToggle = document.querySelector('.menu-toggle');
-  const mobileMenu = document.querySelector('.mobile-menu');
-  const closeMenu = () => {
-    menuToggle.classList.remove('is-open');
-    menuToggle.setAttribute('aria-expanded', 'false');
-    mobileMenu.classList.remove('is-open');
-    mobileMenu.setAttribute('aria-hidden', 'true');
+document.addEventListener('DOMContentLoaded', ()=>{
+  renderLang(currentLang);
+  document.body.classList.add('is-ready');
+  const header=document.querySelector('.site-header');
+  const menuBtn=document.querySelector('.menu-btn');
+  const mobile=document.querySelector('.mobile-nav');
+  const closeMenu=()=>{
+    menuBtn?.classList.remove('is-open');
+    menuBtn?.setAttribute('aria-expanded','false');
+    mobile?.classList.remove('is-open');
+    mobile?.setAttribute('aria-hidden','true');
     document.body.classList.remove('menu-open');
   };
-  menuToggle?.addEventListener('click', () => {
-    const isOpen = !menuToggle.classList.contains('is-open');
-    menuToggle.classList.toggle('is-open', isOpen);
-    menuToggle.setAttribute('aria-expanded', String(isOpen));
-    mobileMenu.classList.toggle('is-open', isOpen);
-    mobileMenu.setAttribute('aria-hidden', String(!isOpen));
-    document.body.classList.toggle('menu-open', isOpen);
-  });
-  document.querySelectorAll('.mobile-menu a').forEach((link) => link.addEventListener('click', closeMenu));
-  window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 24), { passive: true });
-
-  // Language controls work in both desktop and mobile headers.
-  document.querySelectorAll('[data-lang]').forEach((button) => {
-    button.addEventListener('click', () => applyLanguage(button.dataset.lang));
-  });
-  syncProjectLinks();
-  setupLaunchMenus();
-  setupLanguageGate();
-
-  // Staggered reveal as sections enter the viewport.
-  const revealObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
+  const toggleMenu=()=>{
+    const willOpen=!menuBtn.classList.contains('is-open');
+    menuBtn.classList.toggle('is-open', willOpen);
+    menuBtn.setAttribute('aria-expanded', String(willOpen));
+    mobile.classList.toggle('is-open', willOpen);
+    mobile.setAttribute('aria-hidden', String(!willOpen));
+    document.body.classList.toggle('menu-open', willOpen);
+  };
+  menuBtn?.addEventListener('click', toggleMenu);
+  mobile?.querySelectorAll('a').forEach(a=>a.addEventListener('click', closeMenu));
+  window.addEventListener('scroll', ()=>header?.classList.toggle('scrolled', window.scrollY>18), {passive:true});
+  document.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click', ()=>applyLang(b.dataset.lang)));
+  syncTiles(); setupFilters(); setupGate();
+  const io=new IntersectionObserver((entries, obs)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('is-visible'); obs.unobserve(e.target); } });
+  }, {threshold:.14, rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  const dot=document.querySelector('.cursor-dot');
+  const glow=document.querySelector('.cursor-glow');
+  if(dot && glow && window.matchMedia('(pointer:fine)').matches){
+    let cx=0,cy=0,gx=0,gy=0,raf=null;
+    window.addEventListener('pointermove', e=>{
+      cx=e.clientX; cy=e.clientY;
+      dot.style.left=cx+'px'; dot.style.top=cy+'px'; dot.style.opacity='1'; glow.style.opacity='.7';
+      if(!raf) raf=requestAnimationFrame(()=>{ gx+=(cx-gx)*.12; gy+=(cy-gy)*.12; glow.style.left=gx+'px'; glow.style.top=gy+'px'; raf=null; });
+    });
+    window.addEventListener('pointerout', e=>{ if(!e.relatedTarget){ dot.style.opacity='0'; glow.style.opacity='0'; } });
+    document.querySelectorAll('a,button,[data-tilt]').forEach(el=>{
+      el.addEventListener('pointerenter', ()=>dot.classList.add('hover'));
+      el.addEventListener('pointerleave', ()=>dot.classList.remove('hover'));
+    });
+  }
+  if(window.matchMedia('(pointer:fine)').matches){
+    document.querySelectorAll('[data-tilt]').forEach(card=>{
+      card.addEventListener('pointermove', e=>{
+        const r=card.getBoundingClientRect();
+        const rx=((e.clientY-r.top)/r.height-.5)*-3;
+        const ry=((e.clientX-r.left)/r.width-.5)*3;
+        card.style.transform=`perspective(1000px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-3px)`;
+      });
+      card.addEventListener('pointerleave', ()=>{ card.style.transform=''; });
+    });
+  }
+  document.querySelectorAll('.game-tile').forEach(tile=>{
+    tile.addEventListener('click', e=>{
+      if(e.target.closest('a')) return;
+      const active=document.querySelector('.tiles-filter-tabs .is-active')?.dataset.filter;
+      if(active==='steam' && tile.dataset.steam){ window.open(tile.dataset.steam, '_blank'); }
+      else{
+        const url=tile.dataset.website;
+        if(url && url!=='#' && !url.startsWith('#')) window.open(url, '_blank');
+        else if(url==='#contact') document.getElementById('contact')?.scrollIntoView({behavior:'smooth'});
       }
     });
-  }, { threshold: .12, rootMargin: '0px 0px -7% 0px' });
-  document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element));
-
-  // Keep the scene alive with a very restrained mouse parallax.
-  const hero = document.querySelector('.hero');
-  const parallaxLayers = document.querySelectorAll('[data-speed]');
-  if (hero && window.matchMedia('(pointer: fine)').matches) {
-    hero.addEventListener('pointermove', (event) => {
-      const x = (event.clientX / window.innerWidth - .5) * 2;
-      const y = (event.clientY / window.innerHeight - .5) * 2;
-      parallaxLayers.forEach((layer) => {
-        const speed = Number(layer.dataset.speed) || .1;
-        layer.style.transform = `scale(1.06) translate(${x * speed * -18}px, ${y * speed * -18}px)`;
-      });
-    });
-    hero.addEventListener('pointerleave', () => parallaxLayers.forEach((layer) => { layer.style.transform = 'scale(1.06)'; }));
-  }
-
-  // Custom cursor and ambient glow are deliberately disabled on touch screens.
-  const cursor = document.querySelector('.custom-cursor');
-  const glow = document.querySelector('.cursor-glow');
-  if (cursor && glow && window.matchMedia('(pointer: fine)').matches) {
-    let cursorX = 0; let cursorY = 0; let glowX = 0; let glowY = 0;
-    let frame;
-    window.addEventListener('pointermove', (event) => {
-      cursorX = event.clientX; cursorY = event.clientY;
-      cursor.style.left = `${cursorX}px`; cursor.style.top = `${cursorY}px`;
-      cursor.style.opacity = '1'; glow.style.opacity = '.8';
-      if (!frame) frame = requestAnimationFrame(() => {
-        glowX += (cursorX - glowX) * .12; glowY += (cursorY - glowY) * .12;
-        glow.style.left = `${glowX}px`; glow.style.top = `${glowY}px`; frame = null;
-      });
-    });
-    window.addEventListener('pointerout', (event) => { if (!event.relatedTarget) { cursor.style.opacity = '0'; glow.style.opacity = '0'; } });
-    document.querySelectorAll('a, button, [data-tilt]').forEach((element) => {
-      element.addEventListener('pointerenter', () => cursor.classList.add('is-hover'));
-      element.addEventListener('pointerleave', () => cursor.classList.remove('is-hover'));
-    });
-  }
-
-  // Subtle 3D card response, kept small so the artwork stays elegant.
-  if (window.matchMedia('(pointer: fine)').matches) {
-    document.querySelectorAll('[data-tilt]').forEach((card) => {
-      card.addEventListener('pointermove', (event) => {
-        const bounds = card.getBoundingClientRect();
-        const rotateX = ((event.clientY - bounds.top) / bounds.height - .5) * -3.5;
-        const rotateY = ((event.clientX - bounds.left) / bounds.width - .5) * 3.5;
-        card.style.transform = `perspective(1100px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
-      });
-      card.addEventListener('pointerleave', () => { card.style.transform = ''; });
-    });
-    document.querySelectorAll('.magnetic').forEach((button) => {
-      button.addEventListener('pointermove', (event) => {
-        const bounds = button.getBoundingClientRect();
-        const x = (event.clientX - bounds.left - bounds.width / 2) * .12;
-        const y = (event.clientY - bounds.top - bounds.height / 2) * .18;
-        button.style.transform = `translate(${x}px, ${y}px)`;
-      });
-      button.addEventListener('pointerleave', () => { button.style.transform = ''; });
-    });
-  }
+  });
+  window.addEventListener('keydown', e=>{
+    if(e.key==='Escape'){
+      const gate=document.getElementById('language-gate');
+      if(gate && !gate.classList.contains('is-hidden')){
+        localStorage.setItem('nyxtails-gate-v4','seen');
+        gate.classList.add('is-leaving');
+        document.body.classList.remove('gate-open');
+        setTimeout(()=>gate.classList.add('is-hidden'), 600);
+      }
+      closeMenu();
+    }
+  });
 });
