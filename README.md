@@ -12,16 +12,17 @@ php -S localhost:8080
 
 Then open <http://localhost:8080>.
 
-If PHP is not installed, use a local PHP-capable server such as XAMPP, Laragon, MAMP, or Docker. The language is selected from the browser on first visit; later choices persist in localStorage without a page refresh.
+If PHP is not installed, use a local PHP-capable server such as XAMPP, Laragon, MAMP, or Docker. On first visit the site opens a bilingual EN / TR language gate; the choice is remembered and later language changes do not refresh the page.
 
 ## Included
 
 - `index.php` entry point with browser-language detection for English and Turkish.
+- Cinematic first-entry language gate inspired by the project's visual language.
 - Full-screen Nyx / fox-tail hero with locally stored cinematic key art and a Steam image fallback for Backrooms Manager — Together.
-- EN / TR content switcher with animated transition, localStorage persistence, desktop/mobile synchronization, and no refresh.
+- EN / TR content switcher with a scan-line transition, localStorage persistence, desktop/mobile synchronization, and no refresh.
 - Responsive navigation with a full-screen mobile menu and visible language control on mobile.
-- Destination selector for game cards: official game site or Steam page. Cards without a Steam page gracefully fall back to their official site.
-- Showcase cards for Backrooms Manager — Together, FILE COPY, COZY MINT, and Project Nyx.
+- Framed project index with four ordered cards: Backrooms Manager — Together, FILE COPY, COZY MINT, and Project Nyx.
+- Hover/focus project launcher that lets visitors choose the official project website or Steam. Projects without a Steam page only expose their official site.
 - Studio story, creative principles, three co-founder cards, journal / YouTube / GitHub links, careers invitation, contact CTA, and editorial footer.
 - IntersectionObserver reveal animation, custom cursor, pointer glow, magnetic buttons, and subtle 3D game-card tilt.
 - `prefers-reduced-motion` support and touch-friendly fallbacks.
@@ -29,8 +30,8 @@ If PHP is not installed, use a local PHP-capable server such as XAMPP, Laragon, 
 ## Files
 
 - `index.php` — PHP page structure, browser-language bootstrap, and content hooks.
-- `styles.css` — visual system, typography, responsive layouts, and motion.
-- `script.js` — bilingual copy, no-refresh language switching, game destination switching, and interaction layer.
+- `styles.css` — visual system, typography, responsive layouts, language gate, project frame, and motion.
+- `script.js` — bilingual copy, no-refresh language switching, project launcher interactions, and reveal animation.
 - `assets/` — locally stored cinematic concept imagery used by the hero and game cards.
 
 ## External destinations

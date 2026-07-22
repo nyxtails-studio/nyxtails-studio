@@ -13,12 +13,26 @@ $initialLanguage = in_array($browserLanguage, $supportedLanguages, true) ? $brow
   <title>Nyxtails Studio — Weaving Darkness Into Worlds</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="site-noise" aria-hidden="true"></div>
-  <div class="language-transition" aria-hidden="true"><span></span></div>
+  <div class="language-transition" aria-hidden="true"><span>EN / TR</span></div>
+  <div class="language-gate" id="language-gate" aria-modal="true" role="dialog" aria-labelledby="language-gate-title">
+    <div class="language-gate-stars" aria-hidden="true"></div>
+    <div class="language-gate-inner">
+      <div class="gate-mark"><svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true"><path class="brand-moon" d="M30.9 5.7c-7.6 2.1-12.8 9-12.1 16.8.8 8.8 8.5 15.3 17.3 14.5 2-.2 3.9-.8 5.6-1.7-2.8 5.3-8.4 8.9-14.8 8.9-9.3 0-16.8-7.5-16.8-16.8 0-9.2 7.4-16.7 16.5-16.8 1.5 0 2.9.2 4.3.6Z" /><path class="brand-tail" d="M9.4 39.8c7.2-8.4 13.7-12.7 19.6-13 5.8-.3 9.3 1.8 10.5 6.5-4.7-2.6-8.5-2.5-11.4.1-3.8 3.4-8.2 5.5-13.3 6.3 1.7-1.9 3-3.8 3.8-5.7-2.8 2.2-5.9 4-9.2 5.8Z" /><circle class="brand-star" cx="9.2" cy="10.3" r="1.4" /><circle class="brand-star" cx="38.4" cy="12.2" r="1" /></svg><span>NYXTAILS / 001</span></div>
+      <p class="gate-kicker">Choose your frequency / Dilini seç</p>
+      <h2 id="language-gate-title">Enter the night.<br /><em>Geceye gir.</em></h2>
+      <p class="gate-copy">Choose a language to continue.<br />Devam etmek için bir dil seç.</p>
+      <div class="gate-language-options">
+        <button type="button" data-gate-language="en"><span>EN</span><small>English</small><i>↗</i></button>
+        <button type="button" data-gate-language="tr"><span>TR</span><small>Türkçe</small><i>↗</i></button>
+      </div>
+      <div class="gate-footer"><span>Nyxtails Studio</span><span>Weaving darkness into worlds.</span></div>
+    </div>
+  </div>
   <div class="cursor-glow" aria-hidden="true"></div>
   <div class="custom-cursor" aria-hidden="true"><span></span></div>
 
@@ -119,13 +133,9 @@ $initialLanguage = in_array($browserLanguage, $supportedLanguages, true) ? $brow
         <p class="heading-note" data-i18n="games.intro">We build places you can get lost in — then give you a reason to find your way back.</p>
       </div>
 
-      <div class="destination-switch reveal" role="group" aria-label="Game destination">
-        <span data-i18n="games.destinationLabel">Take me to</span>
-        <button type="button" class="destination-option is-active" data-destination="website"><span data-i18n="games.destinationWebsite">Official game sites</span><i></i></button>
-        <button type="button" class="destination-option" data-destination="steam"><span data-i18n="games.destinationSteam">Steam pages</span><i></i></button>
-      </div>
-
-      <div class="games-showcase">
+      <div class="games-frame reveal">
+        <div class="games-frame-head"><span data-i18n="games.frameLabel">Selected worlds / 04</span><span data-i18n="games.frameHint">Hover a project to choose its destination</span><i></i></div>
+        <div class="games-showcase">
         <article class="game-card game-card-feature reveal reveal-delay-1" data-tilt data-game="backrooms" data-copy="cardOne" data-website="https://the.backrooms.nyxtails.com/" data-steam="https://store.steampowered.com/app/4895520/Backrooms_Manager__Together/">
           <div class="game-image" style="--card-image: url('https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4895520/0d71d241977a872ce64d15cbc0733fba0e5c8ca4/header.jpg?t=1784612290'), url('assets/backrooms-manager.jpg')"></div>
           <div class="game-card-shade"></div>
@@ -134,7 +144,7 @@ $initialLanguage = in_array($browserLanguage, $supportedLanguages, true) ? $brow
             <div class="game-kicker" data-i18n="games.cardOne.kicker">Co-op survival horror · Unreal Engine 5</div>
             <h3>Backrooms<br /><em>Manager — Together</em></h3>
             <p data-i18n="games.cardOne.description">The quota is simple. The place is not. Scavenge an endless architecture with your crew, turn impossible junk into a living business, and keep the dark from balancing the books.</p>
-            <div class="game-card-links"><a data-game-link href="https://the.backrooms.nyxtails.com/" target="_blank" rel="noreferrer" class="text-link"><span data-game-cta data-i18n="games.cardOne.websiteCta">Enter the game site</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3l5 5-5 5" /></svg></a><span class="game-tags" data-i18n="games.cardOne.tags">6 players · Early access · 2026</span></div>
+            <div class="game-card-links"><div class="project-launch"><button class="project-launch-trigger" type="button" data-launch-toggle aria-expanded="false"><span class="launch-trigger-icon">↗</span><span data-i18n="games.launchLabel">Open project</span></button><div class="project-launch-menu" data-launch-menu role="group"><span class="launch-menu-label" data-i18n="games.launchPrompt">Choose a destination</span><div class="launch-menu-links"><a data-site-link href="https://the.backrooms.nyxtails.com/" target="_blank" rel="noreferrer"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" /><path d="M12 9v3H3V3h3" /></svg><span data-i18n="games.websiteOption">Official site</span></a><a data-steam-link href="https://store.steampowered.com/app/4895520/Backrooms_Manager__Together/" target="_blank" rel="noreferrer"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="5" cy="11" r="2" /><circle cx="11.5" cy="4.5" r="2" /><path d="m6.5 10 3.5-4" /></svg><span data-i18n="games.steamOption">Steam</span></a></div></div></div><span class="game-tags" data-i18n="games.cardOne.tags">6 players · Early access · 2026</span></div>
           </div>
         </article>
 
@@ -146,7 +156,7 @@ $initialLanguage = in_array($browserLanguage, $supportedLanguages, true) ? $brow
             <div class="game-kicker" data-i18n="games.cardTwo.kicker">Social deduction · Office chaos · Co-op</div>
             <h3>FILE<br /><em>COPY</em></h3>
             <p data-i18n="games.cardTwo.description">Fill documents. Listen to phones. Decide who deserves your trust. In Zaisen Corp., every round is a new office rumour with a score attached.</p>
-            <a data-game-link href="https://filecopy.nyxtails.com/" target="_blank" rel="noreferrer" class="text-link"><span data-game-cta data-i18n="games.cardTwo.websiteCta">Enter the game site</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3l5 5-5 5" /></svg></a>
+            <div class="game-card-links"><div class="project-launch"><button class="project-launch-trigger" type="button" data-launch-toggle aria-expanded="false"><span class="launch-trigger-icon">↗</span><span data-i18n="games.launchLabel">Open project</span></button><div class="project-launch-menu" data-launch-menu role="group"><span class="launch-menu-label" data-i18n="games.launchPrompt">Choose a destination</span><div class="launch-menu-links"><a data-site-link href="https://filecopy.nyxtails.com/" target="_blank" rel="noreferrer"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" /><path d="M12 9v3H3V3h3" /></svg><span data-i18n="games.websiteOption">Official site</span></a><a data-steam-link href="#" target="_blank" rel="noreferrer"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="5" cy="11" r="2" /><circle cx="11.5" cy="4.5" r="2" /><path d="m6.5 10 3.5-4" /></svg><span data-i18n="games.steamOption">Steam</span></a></div></div></div><span class="game-tags" data-i18n="games.cardTwo.tags">2–8 employees · Social deduction</span></div>
           </div>
         </article>
 
@@ -158,7 +168,7 @@ $initialLanguage = in_array($browserLanguage, $supportedLanguages, true) ? $brow
             <div class="game-kicker" data-i18n="games.cardThree.kicker">Co-op shop management · TCG simulator</div>
             <h3>COZY<br /><em>MINT</em></h3>
             <p data-i18n="games.cardThree.description">Open a tiny figure shop, chase impossible pulls, ride a living market, and build a collection worth showing off — together or on your own terms.</p>
-            <a data-game-link href="https://cozymint.nyxtails.com/" target="_blank" rel="noreferrer" class="text-link"><span data-game-cta data-i18n="games.cardThree.websiteCta">Explore the project</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3l5 5-5 5" /></svg></a>
+            <div class="game-card-links"><div class="project-launch"><button class="project-launch-trigger" type="button" data-launch-toggle aria-expanded="false"><span class="launch-trigger-icon">↗</span><span data-i18n="games.launchLabel">Open project</span></button><div class="project-launch-menu" data-launch-menu role="group"><span class="launch-menu-label" data-i18n="games.launchPrompt">Choose a destination</span><div class="launch-menu-links"><a data-site-link href="https://cozymint.nyxtails.com/" target="_blank" rel="noreferrer"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" /><path d="M12 9v3H3V3h3" /></svg><span data-i18n="games.websiteOption">Official site</span></a><a data-steam-link href="#" target="_blank" rel="noreferrer"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="5" cy="11" r="2" /><circle cx="11.5" cy="4.5" r="2" /><path d="m6.5 10 3.5-4" /></svg><span data-i18n="games.steamOption">Steam</span></a></div></div></div><span class="game-tags" data-i18n="games.cardThree.tags">1–4 players · Collection sim</span></div>
           </div>
         </article>
 
@@ -170,12 +180,14 @@ $initialLanguage = in_array($browserLanguage, $supportedLanguages, true) ? $brow
             <div class="game-kicker" data-i18n="games.cardFour.kicker">Narrative dark fantasy · Original IP</div>
             <h3>Project<br /><em>Nyx</em></h3>
             <p data-i18n="games.cardFour.description">Some stories are not told in daylight. A first glimpse into a myth we are building from shadow, memory, and the softest kind of danger.</p>
-            <a data-game-link href="#contact" class="text-link"><span data-game-cta data-i18n="games.cardFour.websiteCta">Keep me close</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3l5 5-5 5" /></svg></a>
+            <div class="game-card-links"><div class="project-launch"><button class="project-launch-trigger" type="button" data-launch-toggle aria-expanded="false"><span class="launch-trigger-icon">↗</span><span data-i18n="games.launchLabel">Open project</span></button><div class="project-launch-menu" data-launch-menu role="group"><span class="launch-menu-label" data-i18n="games.launchPrompt">Choose a destination</span><div class="launch-menu-links"><a data-site-link href="#contact"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" /><path d="M12 9v3H3V3h3" /></svg><span data-i18n="games.websiteOption">Official site</span></a><a data-steam-link href="#" target="_blank" rel="noreferrer"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="5" cy="11" r="2" /><circle cx="11.5" cy="4.5" r="2" /><path d="m6.5 10 3.5-4" /></svg><span data-i18n="games.steamOption">Steam</span></a></div></div></div><span class="game-tags" data-i18n="games.cardFour.tags">Original IP · Early concept</span></div>
           </div>
           <div class="card-symbol" aria-hidden="true">N</div>
         </article>
+        </div>
+        <div class="games-frame-foot"><span>NX / PROJECT INDEX</span><span data-i18n="games.frameFoot">Each world has its own door.</span><i></i></div>
       </div>
-      <div class="section-tail reveal"><span data-i18n="games.tail">Two worlds in the dark. More signals soon.</span><i></i></div>
+      <div class="section-tail reveal"><span data-i18n="games.tail">Four worlds in the dark. More signals soon.</span><i></i></div>
     </section>
 
     <section class="studio section-shell" id="studio">

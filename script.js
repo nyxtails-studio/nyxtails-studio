@@ -11,11 +11,11 @@ const copy = {
     },
     games: {
       eyebrow: 'The worlds are calling', title: 'Games<br><em>with a pulse.</em>', intro: 'We build places you can get lost in — then give you a reason to find your way back.',
-      destinationLabel: 'Take me to', destinationWebsite: 'Official game sites', destinationSteam: 'Steam pages',
+      frameLabel: 'Selected worlds / 04', frameHint: 'Hover a project to choose its destination', frameFoot: 'Each world has its own door.', launchLabel: 'Open project', launchPrompt: 'Choose a destination', websiteOption: 'Official site', steamOption: 'Steam',
       cardOne: { status: 'In development', kicker: 'Co-op survival horror · Unreal Engine 5', description: 'The quota is simple. The place is not. Scavenge an endless architecture with your crew, turn impossible junk into a living business, and keep the dark from balancing the books.', websiteCta: 'Enter the game site', steamCta: 'Wishlist on Steam', fallbackCta: 'Official site · Steam page soon', tags: '6 players · Early access · 2026' },
-      cardTwo: { status: 'In development', kicker: 'Social deduction · Office chaos · Co-op', description: 'Fill documents. Listen to phones. Decide who deserves your trust. In Zaisen Corp., every round is a new office rumour with a score attached.', websiteCta: 'Enter the game site', steamCta: 'Steam page coming soon', fallbackCta: 'Official site · Steam page soon' },
-      cardThree: { status: 'Building the collection', kicker: 'Co-op shop management · TCG simulator', description: 'Open a tiny figure shop, chase impossible pulls, ride a living market, and build a collection worth showing off — together or on your own terms.', websiteCta: 'Explore the project', steamCta: 'Steam page coming soon', fallbackCta: 'Official site · Steam page soon' },
-      cardFour: { status: 'A secret taking shape', kicker: 'Narrative dark fantasy · Original IP', description: 'Some stories are not told in daylight. A first glimpse into a myth we are building from shadow, memory, and the softest kind of danger.', websiteCta: 'Keep me close', steamCta: 'Steam page coming soon', fallbackCta: 'Official site · Steam page soon' },
+      cardTwo: { status: 'In development', kicker: 'Social deduction · Office chaos · Co-op', description: 'Fill documents. Listen to phones. Decide who deserves your trust. In Zaisen Corp., every round is a new office rumour with a score attached.', websiteCta: 'Enter the game site', steamCta: 'Steam page coming soon', fallbackCta: 'Official site · Steam page soon', tags: '2–8 employees · Social deduction' },
+      cardThree: { status: 'Building the collection', kicker: 'Co-op shop management · TCG simulator', description: 'Open a tiny figure shop, chase impossible pulls, ride a living market, and build a collection worth showing off — together or on your own terms.', websiteCta: 'Explore the project', steamCta: 'Steam page coming soon', fallbackCta: 'Official site · Steam page soon', tags: '1–4 players · Collection sim' },
+      cardFour: { status: 'A secret taking shape', kicker: 'Narrative dark fantasy · Original IP', description: 'Some stories are not told in daylight. A first glimpse into a myth we are building from shadow, memory, and the softest kind of danger.', websiteCta: 'Keep me close', steamCta: 'Steam page coming soon', fallbackCta: 'Official site · Steam page soon', tags: 'Original IP · Early concept' },
       tail: 'Four worlds in the dark. More signals soon.'
     },
     studio: {
@@ -50,11 +50,11 @@ const copy = {
     },
     games: {
       eyebrow: 'Dünyalar çağırıyor', title: 'İçinde hayat<br><em>atan oyunlar.</em>', intro: 'Kaybolabileceğiniz yerler inşa ediyoruz — sonra size geri dönmek için bir sebep veriyoruz.',
-      destinationLabel: 'Şuraya git', destinationWebsite: 'Resmî oyun siteleri', destinationSteam: 'Steam sayfaları',
+      frameLabel: 'Seçili dünyalar / 04', frameHint: 'Hedefi seçmek için projenin üzerine gel', frameFoot: 'Her dünyanın kendine ait bir kapısı var.', launchLabel: 'Projeyi aç', launchPrompt: 'Bir hedef seç', websiteOption: 'Resmî site', steamOption: 'Steam',
       cardOne: { status: 'Geliştirme aşamasında', kicker: 'Birlikte hayatta kalma korkusu · Unreal Engine 5', description: 'Kota basit. Mekân değil. Ekibinle sonsuz mimaride ganimet topla, imkânsız hurdaları yaşayan bir işletmeye dönüştür ve karanlığın hesapları dengelemesine izin verme.', websiteCta: 'Oyun sitesine gir', steamCta: 'Steam’de istek listesine ekle', fallbackCta: 'Resmî site · Steam sayfası yakında', tags: '6 oyuncu · Erken erişim · 2026' },
-      cardTwo: { status: 'Geliştirme aşamasında', kicker: 'Sosyal dedüksiyon · Ofis kaosu · Co-op', description: 'Belgeleri doldur. Telefonları dinle. Kime güveneceğine karar ver. Zaisen Corp.’ta her tur, puana dönüşen yeni bir ofis söylentisi.', websiteCta: 'Oyun sitesine gir', steamCta: 'Steam sayfası yakında', fallbackCta: 'Resmî site · Steam sayfası yakında' },
-      cardThree: { status: 'Koleksiyon kuruluyor', kicker: 'Co-op dükkân yönetimi · TCG simülatörü', description: 'Küçük bir figür dükkânı aç, imkânsız kutuları kovala, yaşayan piyasayı yönet ve birlikte ya da kendi kurallarınla sergilenmeye değer bir koleksiyon kur.', websiteCta: 'Projeyi keşfet', steamCta: 'Steam sayfası yakında', fallbackCta: 'Resmî site · Steam sayfası yakında' },
-      cardFour: { status: 'Şekillenen bir sır', kicker: 'Anlatı odaklı karanlık fantezi · Özgün IP', description: 'Bazı hikâyeler gün ışığında anlatılmaz. Gölgeden, hafızadan ve en yumuşak tehlike biçiminden kurduğumuz bir mite ilk bakış.', websiteCta: 'Beni haberdar et', steamCta: 'Steam sayfası yakında', fallbackCta: 'Resmî site · Steam sayfası yakında' },
+      cardTwo: { status: 'Geliştirme aşamasında', kicker: 'Sosyal dedüksiyon · Ofis kaosu · Co-op', description: 'Belgeleri doldur. Telefonları dinle. Kime güveneceğine karar ver. Zaisen Corp.’ta her tur, puana dönüşen yeni bir ofis söylentisi.', websiteCta: 'Oyun sitesine gir', steamCta: 'Steam sayfası yakında', fallbackCta: 'Resmî site · Steam sayfası yakında', tags: '2–8 çalışan · Sosyal dedüksiyon' },
+      cardThree: { status: 'Koleksiyon kuruluyor', kicker: 'Co-op dükkân yönetimi · TCG simülatörü', description: 'Küçük bir figür dükkânı aç, imkânsız kutuları kovala, yaşayan piyasayı yönet ve birlikte ya da kendi kurallarınla sergilenmeye değer bir koleksiyon kur.', websiteCta: 'Projeyi keşfet', steamCta: 'Steam sayfası yakında', fallbackCta: 'Resmî site · Steam sayfası yakında', tags: '1–4 oyuncu · Koleksiyon simülasyonu' },
+      cardFour: { status: 'Şekillenen bir sır', kicker: 'Anlatı odaklı karanlık fantezi · Özgün IP', description: 'Bazı hikâyeler gün ışığında anlatılmaz. Gölgeden, hafızadan ve en yumuşak tehlike biçiminden kurduğumuz bir mite ilk bakış.', websiteCta: 'Beni haberdar et', steamCta: 'Steam sayfası yakında', fallbackCta: 'Resmî site · Steam sayfası yakında', tags: 'Özgün IP · Erken konsept' },
       tail: 'Karanlıkta dört dünya. Yakında daha fazla sinyal.'
     },
     studio: {
@@ -82,7 +82,6 @@ const copy = {
 };
 
 let currentLanguage = localStorage.getItem('nyxtails-language') || window.NYXT_INITIAL_LANGUAGE || 'en';
-let currentDestination = localStorage.getItem('nyxtails-destination') || 'website';
 let languageSwitchTimer;
 
 function getCopy(key) {
@@ -106,7 +105,7 @@ function renderLanguage(language) {
     ? 'Nyxtails Studio — Karanlığı dünyalara işliyoruz. Atmosferik, hikâye odaklı deneyimler yaratan bağımsız oyun stüdyosu.'
     : 'Nyxtails Studio — weaving darkness into worlds. An independent game studio creating atmospheric, story-driven experiences.';
   document.title = language === 'tr' ? 'Nyxtails Studio — Karanlığı Dünyalara İşliyoruz' : 'Nyxtails Studio — Weaving Darkness Into Worlds';
-  syncDestination(currentDestination, false);
+  syncProjectLinks();
 }
 
 function applyLanguage(language) {
@@ -125,25 +124,71 @@ function applyLanguage(language) {
   }, 130);
 }
 
-function syncDestination(destination, persist = true) {
-  currentDestination = destination;
-  if (persist) localStorage.setItem('nyxtails-destination', destination);
-  document.querySelectorAll('[data-destination]').forEach((button) => {
-    const active = button.dataset.destination === destination;
-    button.classList.toggle('is-active', active);
-    button.setAttribute('aria-pressed', active ? 'true' : 'false');
-  });
+function syncProjectLinks() {
   document.querySelectorAll('[data-game]').forEach((card) => {
-    const link = card.querySelector('[data-game-link]');
-    const cta = card.querySelector('[data-game-cta]');
-    if (!link || !cta) return;
-    const steamUrl = card.dataset.steam;
-    const hasSteam = destination === 'steam' && Boolean(steamUrl);
-    const copyKey = `games.${card.dataset.copy}.${hasSteam ? 'steamCta' : destination === 'steam' ? 'fallbackCta' : 'websiteCta'}`;
-    link.href = hasSteam ? steamUrl : card.dataset.website;
-    link.classList.toggle('is-fallback', destination === 'steam' && !steamUrl);
-    const label = getCopy(copyKey) || getCopy(`games.${card.dataset.copy}.websiteCta`);
-    if (label) cta.innerHTML = label;
+    const siteLink = card.querySelector('[data-site-link]');
+    const steamLink = card.querySelector('[data-steam-link]');
+    if (siteLink) siteLink.href = card.dataset.website;
+    if (!steamLink) return;
+    if (card.dataset.steam) {
+      steamLink.hidden = false;
+      steamLink.href = card.dataset.steam;
+      steamLink.removeAttribute('aria-disabled');
+      steamLink.tabIndex = 0;
+    } else {
+      steamLink.hidden = true;
+      steamLink.removeAttribute('href');
+      steamLink.setAttribute('aria-disabled', 'true');
+      steamLink.tabIndex = -1;
+    }
+  });
+}
+
+function setupLaunchMenus() {
+  document.querySelectorAll('[data-launch-toggle]').forEach((trigger) => {
+    trigger.addEventListener('click', (event) => {
+      event.stopPropagation();
+      const launch = trigger.closest('.project-launch');
+      const open = !launch.classList.contains('is-open');
+      document.querySelectorAll('.project-launch.is-open').forEach((item) => {
+        item.classList.remove('is-open');
+        item.querySelector('[data-launch-toggle]')?.setAttribute('aria-expanded', 'false');
+      });
+      launch.classList.toggle('is-open', open);
+      trigger.setAttribute('aria-expanded', String(open));
+    });
+  });
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.project-launch.is-open').forEach((item) => {
+      item.classList.remove('is-open');
+      item.querySelector('[data-launch-toggle]')?.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
+
+function setupLanguageGate() {
+  const gate = document.querySelector('#language-gate');
+  if (!gate) return;
+  const hasChosenLanguage = localStorage.getItem('nyxtails-language-gate-v2') === 'seen';
+  if (hasChosenLanguage) {
+    gate.classList.add('is-hidden');
+    return;
+  }
+  document.body.classList.add('gate-open');
+  gate.setAttribute('aria-hidden', 'false');
+  gate.querySelectorAll('[data-gate-language]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const language = button.dataset.gateLanguage;
+      if (!copy[language]) return;
+      renderLanguage(language);
+      localStorage.setItem('nyxtails-language-gate-v2', 'seen');
+      gate.classList.add('is-leaving');
+      document.body.classList.remove('gate-open');
+      window.setTimeout(() => {
+        gate.classList.add('is-hidden');
+        gate.setAttribute('aria-hidden', 'true');
+      }, 650);
+    });
   });
 }
 
@@ -176,10 +221,9 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('[data-lang]').forEach((button) => {
     button.addEventListener('click', () => applyLanguage(button.dataset.lang));
   });
-  document.querySelectorAll('[data-destination]').forEach((button) => {
-    button.addEventListener('click', () => syncDestination(button.dataset.destination));
-  });
-  syncDestination(currentDestination);
+  syncProjectLinks();
+  setupLaunchMenus();
+  setupLanguageGate();
 
   // Staggered reveal as sections enter the viewport.
   const revealObserver = new IntersectionObserver((entries, observer) => {
