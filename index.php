@@ -1,10 +1,15 @@
+<?php
+$supportedLanguages = ['en', 'tr'];
+$browserLanguage = strtolower(substr($_SERVER['HTTP_ACCEPT_LANGUAGE'] ?? 'en', 0, 2));
+$initialLanguage = in_array($browserLanguage, $supportedLanguages, true) ? $browserLanguage : 'en';
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?= htmlspecialchars($initialLanguage, ENT_QUOTES, 'UTF-8') ?>">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#050505" />
-  <meta name="description" content="Nyxtails Studio — weaving darkness into worlds. An independent Turkish game studio creating atmospheric, story-driven experiences." />
+  <meta name="description" content="Nyxtails Studio — weaving darkness into worlds. An independent game studio creating atmospheric, story-driven experiences." />
   <title>Nyxtails Studio — Weaving Darkness Into Worlds</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,6 +18,7 @@
 </head>
 <body>
   <div class="site-noise" aria-hidden="true"></div>
+  <div class="language-transition" aria-hidden="true"><span></span></div>
   <div class="cursor-glow" aria-hidden="true"></div>
   <div class="custom-cursor" aria-hidden="true"><span></span></div>
 
@@ -66,7 +72,7 @@
         <a href="#careers"><span>04</span><b data-i18n="nav.careers">Careers</b></a>
         <a href="#contact"><span>05</span><b data-i18n="nav.contact">Contact</b></a>
       </nav>
-      <div class="mobile-menu-footer"><span data-i18n="footer.locale">Türkiye / Worldwide</span><a href="mailto:nyxtails.studio@gmail.com">nyxtails.studio@gmail.com</a><div class="mobile-language"><button type="button" data-lang="en">EN</button><span>/</span><button type="button" data-lang="tr">TR</button></div></div>
+      <div class="mobile-menu-footer"><span data-i18n="footer.locale">Worldwide</span><a href="mailto:nyxtails.studio@gmail.com">nyxtails.studio@gmail.com</a><div class="mobile-language"><button type="button" data-lang="en">EN</button><span>/</span><button type="button" data-lang="tr">TR</button></div></div>
     </div>
   </div>
 
@@ -77,9 +83,10 @@
       <div class="hero-grid" aria-hidden="true"></div>
       <div class="hero-orbit orbit-one" aria-hidden="true"></div>
       <div class="hero-orbit orbit-two" aria-hidden="true"></div>
+      <div class="hero-language-badge"><span data-i18n="hero.languageLabel">Language</span><button type="button" data-lang="en">EN</button><span>/</span><button type="button" data-lang="tr">TR</button></div>
       <div class="hero-content page-shell">
         <div class="hero-copy reveal">
-          <div class="eyebrow accent-eyebrow"><span class="eyebrow-dot"></span><span data-i18n="hero.eyebrow">Independent game studio · Türkiye / Worldwide</span></div>
+          <div class="eyebrow accent-eyebrow"><span class="eyebrow-dot"></span><span data-i18n="hero.eyebrow">Independent game studio · Worldwide</span></div>
           <h1><span data-i18n="hero.lineOne">Weaving</span><br /><i data-i18n="hero.lineTwo">darkness</i><br /><span data-i18n="hero.lineThree">into worlds.</span></h1>
           <p class="hero-description" data-i18n="hero.description">We create atmospheric, story-driven games for the feelings that stay after the screen goes dark.</p>
           <div class="hero-actions">
@@ -94,7 +101,7 @@
         <div class="hero-bottom reveal reveal-delay-3">
           <div class="hero-metadata">
             <div><span data-i18n="hero.metaOneLabel">Current signal</span><strong data-i18n="hero.metaOneValue">01 / In the making</strong></div>
-            <div><span data-i18n="hero.metaTwoLabel">Based in</span><strong data-i18n="hero.metaTwoValue">Istanbul, Türkiye</strong></div>
+            <div><span data-i18n="hero.metaTwoLabel">Reach</span><strong data-i18n="hero.metaTwoValue">Worldwide</strong></div>
             <div><span data-i18n="hero.metaThreeLabel">Est.</span><strong>2024</strong></div>
           </div>
           <a class="scroll-cue" href="#games"><span data-i18n="hero.scroll">Scroll to descend</span><i><b></b></i></a>
@@ -112,28 +119,58 @@
         <p class="heading-note" data-i18n="games.intro">We build places you can get lost in — then give you a reason to find your way back.</p>
       </div>
 
+      <div class="destination-switch reveal" role="group" aria-label="Game destination">
+        <span data-i18n="games.destinationLabel">Take me to</span>
+        <button type="button" class="destination-option is-active" data-destination="website"><span data-i18n="games.destinationWebsite">Official game sites</span><i></i></button>
+        <button type="button" class="destination-option" data-destination="steam"><span data-i18n="games.destinationSteam">Steam pages</span><i></i></button>
+      </div>
+
       <div class="games-showcase">
-        <article class="game-card game-card-feature reveal reveal-delay-1" data-tilt>
-          <div class="game-image" style="--card-image: url('assets/backrooms-manager.jpg')"></div>
+        <article class="game-card game-card-feature reveal reveal-delay-1" data-tilt data-game="backrooms" data-copy="cardOne" data-website="https://the.backrooms.nyxtails.com/" data-steam="https://store.steampowered.com/app/4895520/Backrooms_Manager__Together/">
+          <div class="game-image" style="--card-image: url('https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4895520/0d71d241977a872ce64d15cbc0733fba0e5c8ca4/header.jpg?t=1784612290'), url('assets/backrooms-manager.jpg')"></div>
           <div class="game-card-shade"></div>
-          <div class="game-card-top"><span class="status status-live"><i></i><span data-i18n="games.cardOne.status">In development</span></span><span class="game-index">01 / 02</span></div>
+          <div class="game-card-top"><span class="status status-live"><i></i><span data-i18n="games.cardOne.status">In development</span></span><span class="game-index">01 / 04</span></div>
           <div class="game-card-content">
             <div class="game-kicker" data-i18n="games.cardOne.kicker">Co-op survival horror · Unreal Engine 5</div>
             <h3>Backrooms<br /><em>Manager — Together</em></h3>
             <p data-i18n="games.cardOne.description">The quota is simple. The place is not. Scavenge an endless architecture with your crew, turn impossible junk into a living business, and keep the dark from balancing the books.</p>
-            <div class="game-card-links"><a href="https://store.steampowered.com/app/4895520/Backrooms_Manager__Together/" target="_blank" rel="noreferrer" class="text-link"><span data-i18n="games.cardOne.cta">Wishlist on Steam</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3l5 5-5 5" /></svg></a><span class="game-tags" data-i18n="games.cardOne.tags">6 players · Early access · 2026</span></div>
+            <div class="game-card-links"><a data-game-link href="https://the.backrooms.nyxtails.com/" target="_blank" rel="noreferrer" class="text-link"><span data-game-cta data-i18n="games.cardOne.websiteCta">Enter the game site</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3l5 5-5 5" /></svg></a><span class="game-tags" data-i18n="games.cardOne.tags">6 players · Early access · 2026</span></div>
           </div>
         </article>
 
-        <article class="game-card game-card-secondary reveal reveal-delay-2" data-tilt>
+        <article class="game-card game-card-secondary reveal reveal-delay-2" data-tilt data-game="filecopy" data-copy="cardTwo" data-website="https://filecopy.nyxtails.com/" data-steam="">
+          <div class="game-image" style="--card-image: url('assets/filecopy.jpg')"></div>
+          <div class="game-card-shade"></div>
+          <div class="game-card-top"><span class="status status-live"><i></i><span data-i18n="games.cardTwo.status">In development</span></span><span class="game-index">02 / 04</span></div>
+          <div class="game-card-content">
+            <div class="game-kicker" data-i18n="games.cardTwo.kicker">Social deduction · Office chaos · Co-op</div>
+            <h3>FILE<br /><em>COPY</em></h3>
+            <p data-i18n="games.cardTwo.description">Fill documents. Listen to phones. Decide who deserves your trust. In Zaisen Corp., every round is a new office rumour with a score attached.</p>
+            <a data-game-link href="https://filecopy.nyxtails.com/" target="_blank" rel="noreferrer" class="text-link"><span data-game-cta data-i18n="games.cardTwo.websiteCta">Enter the game site</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3l5 5-5 5" /></svg></a>
+          </div>
+        </article>
+
+        <article class="game-card game-card-secondary reveal reveal-delay-3" data-tilt data-game="cozymint" data-copy="cardThree" data-website="https://cozymint.nyxtails.com/" data-steam="">
+          <div class="game-image" style="--card-image: url('assets/cozy-mint.jpg')"></div>
+          <div class="game-card-shade"></div>
+          <div class="game-card-top"><span class="status status-cozy"><i></i><span data-i18n="games.cardThree.status">Building the collection</span></span><span class="game-index">03 / 04</span></div>
+          <div class="game-card-content">
+            <div class="game-kicker" data-i18n="games.cardThree.kicker">Co-op shop management · TCG simulator</div>
+            <h3>COZY<br /><em>MINT</em></h3>
+            <p data-i18n="games.cardThree.description">Open a tiny figure shop, chase impossible pulls, ride a living market, and build a collection worth showing off — together or on your own terms.</p>
+            <a data-game-link href="https://cozymint.nyxtails.com/" target="_blank" rel="noreferrer" class="text-link"><span data-game-cta data-i18n="games.cardThree.websiteCta">Explore the project</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3l5 5-5 5" /></svg></a>
+          </div>
+        </article>
+
+        <article class="game-card game-card-secondary reveal reveal-delay-1" data-tilt data-game="project-nyx" data-copy="cardFour" data-website="#contact" data-steam="">
           <div class="game-image" style="--card-image: url('assets/project-nyx.jpg')"></div>
           <div class="game-card-shade"></div>
-          <div class="game-card-top"><span class="status status-secret"><i></i><span data-i18n="games.cardTwo.status">A secret taking shape</span></span><span class="game-index">02 / 02</span></div>
+          <div class="game-card-top"><span class="status status-secret"><i></i><span data-i18n="games.cardFour.status">A secret taking shape</span></span><span class="game-index">04 / 04</span></div>
           <div class="game-card-content">
-            <div class="game-kicker" data-i18n="games.cardTwo.kicker">Narrative dark fantasy · Original IP</div>
+            <div class="game-kicker" data-i18n="games.cardFour.kicker">Narrative dark fantasy · Original IP</div>
             <h3>Project<br /><em>Nyx</em></h3>
-            <p data-i18n="games.cardTwo.description">Some stories are not told in daylight. A first glimpse into a myth we are building from shadow, memory, and the softest kind of danger.</p>
-            <a href="#contact" class="text-link"><span data-i18n="games.cardTwo.cta">Keep me close</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3l5 5-5 5" /></svg></a>
+            <p data-i18n="games.cardFour.description">Some stories are not told in daylight. A first glimpse into a myth we are building from shadow, memory, and the softest kind of danger.</p>
+            <a data-game-link href="#contact" class="text-link"><span data-game-cta data-i18n="games.cardFour.websiteCta">Keep me close</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3l5 5-5 5" /></svg></a>
           </div>
           <div class="card-symbol" aria-hidden="true">N</div>
         </article>
@@ -153,7 +190,7 @@
       <div class="studio-story">
         <div class="story-quote reveal"><span class="quote-mark">“</span><blockquote data-i18n="studio.quote">The dark is not empty.<br /><em>It is where everything begins.</em></blockquote><div class="quote-line"></div><span class="quote-credit" data-i18n="studio.quoteCredit">— Nyxtails studio note / 001</span></div>
         <div class="story-copy reveal reveal-delay-1">
-          <p class="story-lead" data-i18n="studio.storyLead">We are Nyxtails Studio, an independent team from Türkiye making games for the space between fear and wonder.</p>
+          <p class="story-lead" data-i18n="studio.storyLead">We are Nyxtails Studio, an independent team building games for the space between fear and wonder.</p>
           <p data-i18n="studio.storyBodyOne">Our name is a meeting of opposites: Nyx, the ancient night, and the fox — clever, restless, impossible to fully catch. It is a reminder that atmosphere can be a character, that a quiet hallway can say more than a thousand words, and that the best stories follow you home.</p>
           <p data-i18n="studio.storyBodyTwo">We make worlds with texture. Stories with teeth. Experiences that respect your time, then stay in your head long after you have put the controller down.</p>
           <a class="text-link" href="#contact"><span data-i18n="studio.cta">Come a little closer</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3l5 5-5 5" /></svg></a>
@@ -174,7 +211,7 @@
           <div class="eyebrow"><span>03</span><span data-i18n="team.eyebrow">The people behind the signal</span></div>
           <h2 data-i18n="team.title">The tails<br /><em>behind Nyxtails.</em></h2>
         </div>
-        <p class="heading-note" data-i18n="team.intro">Two founders, one shared obsession: making the invisible feel real.</p>
+        <p class="heading-note" data-i18n="team.intro">Three founders, one shared obsession: making the invisible feel real.</p>
       </div>
       <div class="team-grid">
         <a class="person-card reveal reveal-delay-1" href="https://www.linkedin.com/in/melih-kaan-%C5%9Fahin-200800386/" target="_blank" rel="noreferrer">
@@ -185,7 +222,11 @@
           <div class="person-visual person-visual-ahmet"><div class="person-aura"></div><span class="person-monogram">AE</span><span class="person-number">/ 02</span></div>
           <div class="person-info"><div><h3>Ahmet Esat K.</h3><p data-i18n="team.ahmetRole">Co-founder · Technology &amp; production</p></div><span class="round-arrow"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M5 3h8v8" /></svg></span></div>
         </a>
-        <div class="team-note reveal reveal-delay-3"><span class="team-note-mark">✦</span><p data-i18n="team.note">Built from Istanbul,<br /><em>felt everywhere.</em></p><a class="text-link" href="https://www.linkedin.com/company/135344316/admin/dashboard/" target="_blank" rel="noreferrer"><span data-i18n="team.companyLink">Meet us on LinkedIn</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3l5 5-5 5" /></svg></a></div>
+        <a class="person-card reveal reveal-delay-3" href="https://www.linkedin.com/in/talha-berat-bulut-a57633390/" target="_blank" rel="noreferrer">
+          <div class="person-visual person-visual-talha"><div class="person-aura"></div><span class="person-monogram">TB</span><span class="person-number">/ 03</span></div>
+          <div class="person-info"><div><h3>Talha Berat Bulut</h3><p data-i18n="team.talhaRole">Co-founder · Game development</p></div><span class="round-arrow"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M5 3h8v8" /></svg></span></div>
+        </a>
+        <div class="team-note reveal reveal-delay-3"><span class="team-note-mark">✦</span><p data-i18n="team.note">Built with obsession,<br /><em>felt everywhere.</em></p><a class="text-link" href="https://www.linkedin.com/company/135344316/admin/dashboard/" target="_blank" rel="noreferrer"><span data-i18n="team.companyLink">Meet us on LinkedIn</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3l5 5-5 5" /></svg></a></div>
       </div>
     </section>
 
@@ -208,7 +249,7 @@
         <div class="journal-list reveal reveal-delay-2">
           <a class="journal-item" href="https://www.youtube.com/@nyxtails-studio-tr" target="_blank" rel="noreferrer"><div class="journal-item-number">01</div><div><div class="journal-item-meta"><span data-i18n="journal.itemOneType">Devlog</span><span>05.2026</span></div><h3 data-i18n="journal.itemOneTitle">Building tension<br />one sound at a time</h3><p data-i18n="journal.itemOneBody">Why silence is the most expensive tool in our kit.</p></div><span class="round-arrow"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M5 3h8v8" /></svg></span></a>
           <a class="journal-item" href="https://github.com/nyxtails-studio" target="_blank" rel="noreferrer"><div class="journal-item-number">02</div><div><div class="journal-item-meta"><span data-i18n="journal.itemTwoType">Open notebook</span><span>04.2026</span></div><h3 data-i18n="journal.itemTwoTitle">A small team<br />in a very big maze</h3><p data-i18n="journal.itemTwoBody">Tools, experiments, and the things we leave on GitHub.</p></div><span class="round-arrow"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M5 3h8v8" /></svg></span></a>
-          <a class="journal-item" href="https://www.youtube.com/@nyxtails-studio" target="_blank" rel="noreferrer"><div class="journal-item-number">03</div><div><div class="journal-item-meta"><span data-i18n="journal.itemThreeType">Studio note</span><span>03.2026</span></div><h3 data-i18n="journal.itemThreeTitle">From Türkiye,<br />with feeling</h3><p data-i18n="journal.itemThreeBody">The place we start from, and the worlds we want to share.</p></div><span class="round-arrow"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M5 3h8v8" /></svg></span></a>
+          <a class="journal-item" href="https://www.youtube.com/@nyxtails-studio" target="_blank" rel="noreferrer"><div class="journal-item-number">03</div><div><div class="journal-item-meta"><span data-i18n="journal.itemThreeType">Studio note</span><span>03.2026</span></div><h3 data-i18n="journal.itemThreeTitle">Built to be felt,<br />not explained</h3><p data-i18n="journal.itemThreeBody">The place we start from, and the worlds we want to share.</p></div><span class="round-arrow"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M5 3h8v8" /></svg></span></a>
         </div>
       </div>
       <div class="channel-strip reveal"><span data-i18n="journal.follow">Follow the trail</span><a href="https://www.youtube.com/@nyxtails-studio" target="_blank" rel="noreferrer">YouTube <b>↗</b></a><a href="https://github.com/nyxtails-studio" target="_blank" rel="noreferrer">GitHub <b>↗</b></a><a href="https://www.youtube.com/@nyxtails-studio-tr" target="_blank" rel="noreferrer">YouTube TR <b>↗</b></a></div>
@@ -242,9 +283,10 @@
       <div class="footer-tagline" data-i18n="footer.tagline">Weaving darkness into worlds.</div>
       <div class="footer-top-link"><a href="#top">↑ <span data-i18n="footer.backTop">Back to top</span></a></div>
     </div>
-    <div class="footer-bottom page-shell"><span>© 2026 Nyxtails Studio</span><span data-i18n="footer.made">Made with obsession in Türkiye</span><div class="footer-socials"><a href="https://www.linkedin.com/company/135344316/admin/dashboard/" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://github.com/nyxtails-studio" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.youtube.com/@nyxtails-studio" target="_blank" rel="noreferrer">YouTube</a></div></div>
+    <div class="footer-bottom page-shell"><span>© 2026 Nyxtails Studio</span><span data-i18n="footer.made">Made with obsession</span><div class="footer-socials"><a href="https://www.linkedin.com/company/135344316/admin/dashboard/" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://github.com/nyxtails-studio" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.youtube.com/@nyxtails-studio" target="_blank" rel="noreferrer">YouTube</a></div></div>
   </footer>
 
+  <script>window.NYXT_INITIAL_LANGUAGE = <?= json_encode($initialLanguage, JSON_UNESCAPED_UNICODE) ?>;</script>
   <script src="script.js"></script>
 </body>
 </html>

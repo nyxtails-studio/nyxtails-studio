@@ -4,21 +4,24 @@ const copy = {
   en: {
     nav: { games: 'Games', studio: 'Studio', journal: 'Journal', careers: 'Careers', contact: 'Contact' },
     hero: {
-      eyebrow: 'Independent game studio · Türkiye / Worldwide', lineOne: 'Weaving', lineTwo: 'darkness', lineThree: 'into worlds.',
+      eyebrow: 'Independent game studio · Worldwide', lineOne: 'Weaving', lineTwo: 'darkness', lineThree: 'into worlds.',
       description: 'We create atmospheric, story-driven games for the feelings that stay after the screen goes dark.',
       ctaGames: 'Explore our games', ctaStudio: 'Meet the studio', sideNote: 'For the curious.<br>For the brave.<br>For the ones<br>who look closer.',
-      metaOneLabel: 'Current signal', metaOneValue: '01 / In the making', metaTwoLabel: 'Based in', metaTwoValue: 'Istanbul, Türkiye', metaThreeLabel: 'Est.', scroll: 'Scroll to descend'
+      metaOneLabel: 'Current signal', metaOneValue: '01 / In the making', metaTwoLabel: 'Audience', metaTwoValue: 'Worldwide', metaThreeLabel: 'Est.', scroll: 'Scroll to descend', languageLabel: 'Language'
     },
     games: {
       eyebrow: 'The worlds are calling', title: 'Games<br><em>with a pulse.</em>', intro: 'We build places you can get lost in — then give you a reason to find your way back.',
-      cardOne: { status: 'In development', kicker: 'Co-op survival horror · Unreal Engine 5', description: 'The quota is simple. The place is not. Scavenge an endless architecture with your crew, turn impossible junk into a living business, and keep the dark from balancing the books.', cta: 'Wishlist on Steam', tags: '6 players · Early access · 2026' },
-      cardTwo: { status: 'A secret taking shape', kicker: 'Narrative dark fantasy · Original IP', description: 'Some stories are not told in daylight. A first glimpse into a myth we are building from shadow, memory, and the softest kind of danger.', cta: 'Keep me close' },
-      tail: 'Two worlds in the dark. More signals soon.'
+      destinationLabel: 'Take me to', destinationWebsite: 'Official game sites', destinationSteam: 'Steam pages',
+      cardOne: { status: 'In development', kicker: 'Co-op survival horror · Unreal Engine 5', description: 'The quota is simple. The place is not. Scavenge an endless architecture with your crew, turn impossible junk into a living business, and keep the dark from balancing the books.', websiteCta: 'Enter the game site', steamCta: 'Wishlist on Steam', fallbackCta: 'Official site · Steam page soon', tags: '6 players · Early access · 2026' },
+      cardTwo: { status: 'In development', kicker: 'Social deduction · Office chaos · Co-op', description: 'Fill documents. Listen to phones. Decide who deserves your trust. In Zaisen Corp., every round is a new office rumour with a score attached.', websiteCta: 'Enter the game site', steamCta: 'Steam page coming soon', fallbackCta: 'Official site · Steam page soon' },
+      cardThree: { status: 'Building the collection', kicker: 'Co-op shop management · TCG simulator', description: 'Open a tiny figure shop, chase impossible pulls, ride a living market, and build a collection worth showing off — together or on your own terms.', websiteCta: 'Explore the project', steamCta: 'Steam page coming soon', fallbackCta: 'Official site · Steam page soon' },
+      cardFour: { status: 'A secret taking shape', kicker: 'Narrative dark fantasy · Original IP', description: 'Some stories are not told in daylight. A first glimpse into a myth we are building from shadow, memory, and the softest kind of danger.', websiteCta: 'Keep me close', steamCta: 'Steam page coming soon', fallbackCta: 'Official site · Steam page soon' },
+      tail: 'Four worlds in the dark. More signals soon.'
     },
     studio: {
       eyebrow: 'A small studio with a long shadow', title: 'Made in the<br><em>quiet hours.</em>', intro: 'Nyx is the night before the story begins. That is where we like to work.',
       quote: 'The dark is not empty.<br><em>It is where everything begins.</em>', quoteCredit: '— Nyxtails studio note / 001',
-      storyLead: 'We are Nyxtails Studio, an independent team from Türkiye making games for the space between fear and wonder.',
+      storyLead: 'We are Nyxtails Studio, an independent team building games for the space between fear and wonder.',
       storyBodyOne: 'Our name is a meeting of opposites: Nyx, the ancient night, and the fox — clever, restless, impossible to fully catch. It is a reminder that atmosphere can be a character, that a quiet hallway can say more than a thousand words, and that the best stories follow you home.',
       storyBodyTwo: 'We make worlds with texture. Stories with teeth. Experiences that respect your time, then stay in your head long after you have put the controller down.', cta: 'Come a little closer', principlesLabel: 'The way we make',
       principleOneTitle: 'Atmosphere<br><em>first.</em>', principleOneBody: 'Every light, silence, and distant sound earns its place. Mood is not decoration — it is the language.',
@@ -26,35 +29,38 @@ const copy = {
       principleThreeTitle: 'Craft over<br><em>noise.</em>', principleThreeBody: 'Small teams let us stay close to the work. We polish the detail you may never name, but will always feel.'
     },
     team: {
-      eyebrow: 'The people behind the signal', title: 'The tails<br><em>behind Nyxtails.</em>', intro: 'Two founders, one shared obsession: making the invisible feel real.',
-      melihRole: 'Co-founder · Creative direction', ahmetRole: 'Co-founder · Technology & production', note: 'Built from Istanbul,<br><em>felt everywhere.</em>', companyLink: 'Meet us on LinkedIn'
+      eyebrow: 'The people behind the signal', title: 'The tails<br><em>behind Nyxtails.</em>', intro: 'Three founders, one shared obsession: making the invisible feel real.',
+      melihRole: 'Co-founder · Creative direction', ahmetRole: 'Co-founder · Technology & production', talhaRole: 'Co-founder · Game development', note: 'Built with obsession,<br><em>felt everywhere.</em>', companyLink: 'Meet us on LinkedIn'
     },
     journal: {
       eyebrow: 'Notes from the dark', title: 'The<br><em>journal.</em>', allCta: 'All transmissions', featureType: 'Development log / film 01', featureTitle: 'What waits<br><em>between the rooms?</em>', featureBody: 'A first look at the systems, sounds, and unsettling little rules behind Backrooms Manager — Together.', watch: 'Watch on YouTube',
-      itemOneType: 'Devlog', itemOneTitle: 'Building tension<br>one sound at a time', itemOneBody: 'Why silence is the most expensive tool in our kit.', itemTwoType: 'Open notebook', itemTwoTitle: 'A small team<br>in a very big maze', itemTwoBody: 'Tools, experiments, and the things we leave on GitHub.', itemThreeType: 'Studio note', itemThreeTitle: 'From Türkiye,<br>with feeling', itemThreeBody: 'The place we start from, and the worlds we want to share.', follow: 'Follow the trail'
+      itemOneType: 'Devlog', itemOneTitle: 'Building tension<br>one sound at a time', itemOneBody: 'Why silence is the most expensive tool in our kit.', itemTwoType: 'Open notebook', itemTwoTitle: 'A small team<br>in a very big maze', itemTwoBody: 'Tools, experiments, and the things we leave on GitHub.', itemThreeType: 'Studio note', itemThreeTitle: 'Built to be felt,<br>not explained', itemThreeBody: 'The place we start from, and the worlds we want to share.', follow: 'Follow the trail'
     },
     careers: { eyebrow: 'Leave the light on', title: 'There is room<br><em>for your shadow.</em>', body: 'We are not hiring for a checklist. We are looking for curious people who care about the last 1% — the strange detail that makes a world breathe.', cta: 'Start a conversation' },
     contact: { eyebrow: 'Open frequency', title: 'Have a story<br><em>worth getting lost in?</em>', body: 'Tell us the thought you cannot shake. We read every signal.' },
-    footer: { tagline: 'Weaving darkness into worlds.', backTop: 'Back to top', made: 'Made with obsession in Türkiye', locale: 'Türkiye / Worldwide' }
+    footer: { tagline: 'Weaving darkness into worlds.', backTop: 'Back to top', made: 'Made with obsession', locale: 'Global / Independent' }
   },
   tr: {
     nav: { games: 'Oyunlar', studio: 'Stüdyo', journal: 'Günlük', careers: 'Kariyer', contact: 'İletişim' },
     hero: {
-      eyebrow: 'Bağımsız oyun stüdyosu · Türkiye / Dünya', lineOne: 'Karanlığı', lineTwo: 'dünyalara', lineThree: 'işliyoruz.',
+      eyebrow: 'Bağımsız oyun stüdyosu · Dünya çapında', lineOne: 'Karanlığı', lineTwo: 'dünyalara', lineThree: 'işliyoruz.',
       description: 'Ekran karardıktan sonra bile içinizde kalan hisler için atmosferik, hikâye odaklı oyunlar yaratıyoruz.',
       ctaGames: 'Oyunlarımızı keşfet', ctaStudio: 'Stüdyoyla tanış', sideNote: 'Merak edenler için.<br>Cesur olanlar için.<br>Daha yakından<br>bakanlar için.',
-      metaOneLabel: 'Güncel sinyal', metaOneValue: '01 / Üretim aşamasında', metaTwoLabel: 'Merkez', metaTwoValue: 'İstanbul, Türkiye', metaThreeLabel: 'Kuruluş', scroll: 'Aşağıya in'
+      metaOneLabel: 'Güncel sinyal', metaOneValue: '01 / Üretim aşamasında', metaTwoLabel: 'Kitle', metaTwoValue: 'Dünya çapında', metaThreeLabel: 'Kuruluş', scroll: 'Aşağıya in', languageLabel: 'Dil'
     },
     games: {
       eyebrow: 'Dünyalar çağırıyor', title: 'İçinde hayat<br><em>atan oyunlar.</em>', intro: 'Kaybolabileceğiniz yerler inşa ediyoruz — sonra size geri dönmek için bir sebep veriyoruz.',
-      cardOne: { status: 'Geliştirme aşamasında', kicker: 'Birlikte hayatta kalma korkusu · Unreal Engine 5', description: 'Kota basit. Mekân değil. Ekibinle sonsuz mimaride ganimet topla, imkânsız hurdaları yaşayan bir işletmeye dönüştür ve karanlığın hesapları dengelemesine izin verme.', cta: 'Steam’de istek listesine ekle', tags: '6 oyuncu · Erken erişim · 2026' },
-      cardTwo: { status: 'Şekillenen bir sır', kicker: 'Anlatı odaklı karanlık fantezi · Özgün IP', description: 'Bazı hikâyeler gün ışığında anlatılmaz. Gölgeden, hafızadan ve en yumuşak tehlike biçiminden kurduğumuz bir mite ilk bakış.', cta: 'Beni haberdar et' },
-      tail: 'Karanlıkta iki dünya. Yakında daha fazla sinyal.'
+      destinationLabel: 'Şuraya git', destinationWebsite: 'Resmî oyun siteleri', destinationSteam: 'Steam sayfaları',
+      cardOne: { status: 'Geliştirme aşamasında', kicker: 'Birlikte hayatta kalma korkusu · Unreal Engine 5', description: 'Kota basit. Mekân değil. Ekibinle sonsuz mimaride ganimet topla, imkânsız hurdaları yaşayan bir işletmeye dönüştür ve karanlığın hesapları dengelemesine izin verme.', websiteCta: 'Oyun sitesine gir', steamCta: 'Steam’de istek listesine ekle', fallbackCta: 'Resmî site · Steam sayfası yakında', tags: '6 oyuncu · Erken erişim · 2026' },
+      cardTwo: { status: 'Geliştirme aşamasında', kicker: 'Sosyal dedüksiyon · Ofis kaosu · Co-op', description: 'Belgeleri doldur. Telefonları dinle. Kime güveneceğine karar ver. Zaisen Corp.’ta her tur, puana dönüşen yeni bir ofis söylentisi.', websiteCta: 'Oyun sitesine gir', steamCta: 'Steam sayfası yakında', fallbackCta: 'Resmî site · Steam sayfası yakında' },
+      cardThree: { status: 'Koleksiyon kuruluyor', kicker: 'Co-op dükkân yönetimi · TCG simülatörü', description: 'Küçük bir figür dükkânı aç, imkânsız kutuları kovala, yaşayan piyasayı yönet ve birlikte ya da kendi kurallarınla sergilenmeye değer bir koleksiyon kur.', websiteCta: 'Projeyi keşfet', steamCta: 'Steam sayfası yakında', fallbackCta: 'Resmî site · Steam sayfası yakında' },
+      cardFour: { status: 'Şekillenen bir sır', kicker: 'Anlatı odaklı karanlık fantezi · Özgün IP', description: 'Bazı hikâyeler gün ışığında anlatılmaz. Gölgeden, hafızadan ve en yumuşak tehlike biçiminden kurduğumuz bir mite ilk bakış.', websiteCta: 'Beni haberdar et', steamCta: 'Steam sayfası yakında', fallbackCta: 'Resmî site · Steam sayfası yakında' },
+      tail: 'Karanlıkta dört dünya. Yakında daha fazla sinyal.'
     },
     studio: {
       eyebrow: 'Uzun gölgeli küçük bir stüdyo', title: 'Sessiz<br><em>saatlerde.</em>', intro: 'Nyx, hikâye başlamadan önceki gecedir. Biz çalışmayı orada seviyoruz.',
       quote: 'Karanlık boş değildir.<br><em>Her şey orada başlar.</em>', quoteCredit: '— Nyxtails stüdyo notu / 001',
-      storyLead: 'Biz Nyxtails Studio’yuz; korku ile hayranlık arasındaki boşluk için oyunlar yapan, Türkiye’den bağımsız bir ekibiz.',
+      storyLead: 'Biz Nyxtails Studio’yuz; korku ile hayranlık arasındaki boşluk için oyunlar yapan, bağımsız bir ekibiz.',
       storyBodyOne: 'İsmimiz iki zıtlığın buluşması: kadim gece Nyx ve tilki — zeki, huzursuz, tamamen yakalanması imkânsız. Bu bize atmosferin bir karakter olabileceğini, sessiz bir koridorun bin kelimeden fazlasını anlatabileceğini ve en iyi hikâyelerin eve kadar sizinle geldiğini hatırlatıyor.',
       storyBodyTwo: 'Dokusunu hissedebileceğiniz dünyalar yapıyoruz. Dişleri olan hikâyeler. Zamanınıza saygı duyan, kumandayı bıraktıktan çok sonra bile zihninizde kalan deneyimler.', cta: 'Biraz daha yaklaş', principlesLabel: 'Üretme biçimimiz',
       principleOneTitle: 'Önce<br><em>atmosfer.</em>', principleOneBody: 'Her ışık, sessizlik ve uzaktan gelen ses yerini hak eder. Hâl, dekorasyon değil — dilin kendisidir.',
@@ -62,27 +68,28 @@ const copy = {
       principleThreeTitle: 'Gürültü değil,<br><em>zanaat.</em>', principleThreeBody: 'Küçük ekipler işe yakın kalmamızı sağlıyor. Belki adını koyamayacağınız ama her zaman hissedeceğiniz detayı parlatıyoruz.'
     },
     team: {
-      eyebrow: 'Sinyalin ardındaki insanlar', title: 'Nyxtails’in<br><em>ardındaki kuyruklar.</em>', intro: 'İki kurucu, tek bir ortak takıntı: görünmeyeni gerçek hissettirmek.',
-      melihRole: 'Kurucu ortak · Yaratıcı yönetim', ahmetRole: 'Kurucu ortak · Teknoloji ve prodüksiyon', note: 'İstanbul’dan doğdu,<br><em>her yerde hissedildi.</em>', companyLink: 'LinkedIn’de tanışalım'
+      eyebrow: 'Sinyalin ardındaki insanlar', title: 'Nyxtails’in<br><em>ardındaki kuyruklar.</em>', intro: 'Üç kurucu, tek bir ortak takıntı: görünmeyeni gerçek hissettirmek.',
+      melihRole: 'Kurucu ortak · Yaratıcı yönetim', ahmetRole: 'Kurucu ortak · Teknoloji ve prodüksiyon', talhaRole: 'Kurucu ortak · Oyun geliştirme', note: 'Tutkuyla üretildi,<br><em>her yerde hissedildi.</em>', companyLink: 'LinkedIn’de tanışalım'
     },
     journal: {
       eyebrow: 'Karanlıktan notlar', title: 'Stüdyo<br><em>günlüğü.</em>', allCta: 'Tüm aktarımlar', featureType: 'Geliştirme günlüğü / film 01', featureTitle: 'Odaların<br><em>arasında ne bekliyor?</em>', featureBody: 'Backrooms Manager — Together’ın sistemlerine, seslerine ve huzursuz edici küçük kurallarına ilk bakış.', watch: 'YouTube’da izle',
-      itemOneType: 'Geliştirme günlüğü', itemOneTitle: 'Gerilimi her sesle<br>biraz daha kurmak', itemOneBody: 'Sessizliğin alet çantamızdaki en pahalı araç oluşu.', itemTwoType: 'Açık defter', itemTwoTitle: 'Küçük bir ekip,<br>çok büyük bir labirent', itemTwoBody: 'Araçlar, deneyler ve GitHub’da bıraktıklarımız.', itemThreeType: 'Stüdyo notu', itemThreeTitle: 'Türkiye’den,<br>duyguyla', itemThreeBody: 'Başladığımız yer ve paylaşmak istediğimiz dünyalar.', follow: 'İzi takip et'
+      itemOneType: 'Geliştirme günlüğü', itemOneTitle: 'Gerilimi her sesle<br>biraz daha kurmak', itemOneBody: 'Sessizliğin alet çantamızdaki en pahalı araç oluşu.', itemTwoType: 'Açık defter', itemTwoTitle: 'Küçük bir ekip,<br>çok büyük bir labirent', itemTwoBody: 'Araçlar, deneyler ve GitHub’da bıraktıklarımız.', itemThreeType: 'Stüdyo notu', itemThreeTitle: 'Gölgeden,<br>duyguyla', itemThreeBody: 'Başladığımız yer ve paylaşmak istediğimiz dünyalar.', follow: 'İzi takip et'
     },
     careers: { eyebrow: 'Işığı açık bırak', title: 'Gölgen için<br><em>yer var.</em>', body: 'Bir kontrol listesi için işe almıyoruz. Bir dünyayı nefes alır hâle getiren o tuhaf ayrıntıyı önemseyen, meraklı insanlar arıyoruz.', cta: 'Bir sohbet başlatalım' },
     contact: { eyebrow: 'Açık frekans', title: 'Kaybolmaya<br><em>değer bir hikâyen mi var?</em>', body: 'Aklından çıkaramadığın düşünceyi bize anlat. Her sinyali okuyoruz.' },
-    footer: { tagline: 'Karanlığı dünyalara işliyoruz.', backTop: 'Başa dön', made: 'Türkiye’de tutkuyla yapıldı', locale: 'Türkiye / Dünya' }
+    footer: { tagline: 'Karanlığı dünyalara işliyoruz.', backTop: 'Başa dön', made: 'Tutkuyla yapıldı', locale: 'Dünya / Bağımsız' }
   }
 };
 
-let currentLanguage = localStorage.getItem('nyxtails-language') || 'en';
+let currentLanguage = localStorage.getItem('nyxtails-language') || window.NYXT_INITIAL_LANGUAGE || 'en';
+let currentDestination = localStorage.getItem('nyxtails-destination') || 'website';
+let languageSwitchTimer;
 
 function getCopy(key) {
   return key.split('.').reduce((result, part) => result && result[part], copy[currentLanguage]);
 }
 
-function applyLanguage(language) {
-  if (!copy[language]) return;
+function renderLanguage(language) {
   currentLanguage = language;
   localStorage.setItem('nyxtails-language', language);
   document.documentElement.lang = language;
@@ -96,9 +103,48 @@ function applyLanguage(language) {
   });
   const description = document.querySelector('meta[name="description"]');
   if (description) description.content = language === 'tr'
-    ? 'Nyxtails Studio — Karanlığı dünyalara işliyoruz. Atmosferik, hikâye odaklı deneyimler yaratan bağımsız Türk oyun stüdyosu.'
-    : 'Nyxtails Studio — weaving darkness into worlds. An independent Turkish game studio creating atmospheric, story-driven experiences.';
+    ? 'Nyxtails Studio — Karanlığı dünyalara işliyoruz. Atmosferik, hikâye odaklı deneyimler yaratan bağımsız oyun stüdyosu.'
+    : 'Nyxtails Studio — weaving darkness into worlds. An independent game studio creating atmospheric, story-driven experiences.';
   document.title = language === 'tr' ? 'Nyxtails Studio — Karanlığı Dünyalara İşliyoruz' : 'Nyxtails Studio — Weaving Darkness Into Worlds';
+  syncDestination(currentDestination, false);
+}
+
+function applyLanguage(language) {
+  if (!copy[language]) return;
+  const isChange = currentLanguage !== language && document.readyState !== 'loading';
+  currentLanguage = language;
+  clearTimeout(languageSwitchTimer);
+  if (!isChange) {
+    renderLanguage(language);
+    return;
+  }
+  document.documentElement.classList.add('is-language-switching');
+  languageSwitchTimer = window.setTimeout(() => {
+    renderLanguage(language);
+    window.setTimeout(() => document.documentElement.classList.remove('is-language-switching'), 460);
+  }, 130);
+}
+
+function syncDestination(destination, persist = true) {
+  currentDestination = destination;
+  if (persist) localStorage.setItem('nyxtails-destination', destination);
+  document.querySelectorAll('[data-destination]').forEach((button) => {
+    const active = button.dataset.destination === destination;
+    button.classList.toggle('is-active', active);
+    button.setAttribute('aria-pressed', active ? 'true' : 'false');
+  });
+  document.querySelectorAll('[data-game]').forEach((card) => {
+    const link = card.querySelector('[data-game-link]');
+    const cta = card.querySelector('[data-game-cta]');
+    if (!link || !cta) return;
+    const steamUrl = card.dataset.steam;
+    const hasSteam = destination === 'steam' && Boolean(steamUrl);
+    const copyKey = `games.${card.dataset.copy}.${hasSteam ? 'steamCta' : destination === 'steam' ? 'fallbackCta' : 'websiteCta'}`;
+    link.href = hasSteam ? steamUrl : card.dataset.website;
+    link.classList.toggle('is-fallback', destination === 'steam' && !steamUrl);
+    const label = getCopy(copyKey) || getCopy(`games.${card.dataset.copy}.websiteCta`);
+    if (label) cta.innerHTML = label;
+  });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -130,6 +176,10 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('[data-lang]').forEach((button) => {
     button.addEventListener('click', () => applyLanguage(button.dataset.lang));
   });
+  document.querySelectorAll('[data-destination]').forEach((button) => {
+    button.addEventListener('click', () => syncDestination(button.dataset.destination));
+  });
+  syncDestination(currentDestination);
 
   // Staggered reveal as sections enter the viewport.
   const revealObserver = new IntersectionObserver((entries, observer) => {
