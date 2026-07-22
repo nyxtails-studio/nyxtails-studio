@@ -1,111 +1,39 @@
-<div align="center">
+# Nyxtails Studio — website concept
 
-# ✨ Nyxtails Studio
+A cinematic, bilingual studio site for Nyxtails Studio, an independent game team from Türkiye. The experience is built around the studio's night-and-fox identity: obsidian surfaces, electric cyan signal lines, violet light, and a restrained blood-red pulse.
 
-![Typing SVG](https://readme-typing-svg.herokuapp.com/?font=Orbitron&size=56&pause=1000&color=00F5FF&background=0D1117&center=true&vCenter=true&width=920&lines=Nyxtails+Studio;Horror+%26+Co-op+Experiences)
+## Run locally
 
-<br>
+This is a dependency-free static site. From the repository root:
 
-![Discord Presence](https://lanyard.cnrad.dev/api/1444019615318544564?theme=dark&showDisplayName=true)
-![Discord Presence](https://lanyard.cnrad.dev/api/506486158461501460?theme=dark&showDisplayName=true)
-![Discord Presence](https://lanyard.cnrad.dev/api/222051092131741707?theme=dark&showDisplayName=true)
+```bash
+python3 -m http.server 8080
+```
 
-<br>
+Then open <http://localhost:8080>.
 
-[![Discord](https://img.shields.io/badge/Discord-Join%20Us-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/3vshfZ9byW)
-[![YouTube](https://img.shields.io/badge/YouTube-Subscribe-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@nyxtails-studio)
-<br>
+## Included
 
-[![Steam](https://img.shields.io/badge/Steam-Follow%20Us-1B2838?style=for-the-badge&logo=steam&logoColor=white)](https://store.steampowered.com/developer/Nyxtails%20Studio)
-[![GitHub](https://img.shields.io/badge/GitHub-nyxtails--studio-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/nyxtails-studio)
-![GitHub followers](https://img.shields.io/github/followers/nyxtails-studio?style=for-the-badge&label=Followers&color=685a82)
-<br>
+- Full-screen Nyx / fox-tail hero with generated key art, parallax, orbit lines, metadata, and scroll cue.
+- Bilingual EN / TR content switcher with localStorage persistence and mobile support.
+- Responsive navigation with a full-screen mobile menu.
+- Backrooms Manager — Together and Project Nyx game showcase cards.
+- Studio story, creative principles, founder cards, journal / YouTube / GitHub links, careers invitation, contact CTA, and editorial footer.
+- IntersectionObserver reveal animation, custom cursor, pointer glow, magnetic buttons, and subtle 3D game-card tilt.
+- `prefers-reduced-motion` support and touch-friendly fallbacks.
 
-</div>
-<br>
+## Files
 
----
+- `index.html` — page structure and content hooks.
+- `styles.css` — visual system, responsive layouts, and motion.
+- `script.js` — language data, interaction layer, and reveal animation.
+- `assets/` — locally stored cinematic concept imagery used by the hero and game cards.
 
-<div align="center">
+## External destinations
 
-## 🎮 About the Studio
-
-**Nyxtails Studio** is an independent game development studio specializing in immersive co-op horror and survival experiences.  
-We craft intense multiplayer games that emphasize teamwork, resource management, and psychological tension.
-
-> *"Creating unforgettable moments in the dark."*
-
-</div>
-<br>
-
----
-
-<div align="center">
-
-## 🚀 Current Project
-
-### **Backrooms Manager - Together**
-<br>
-<img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4895520/0d71d241977a872ce64d15cbc0733fba0e5c8ca4/header.jpg" width="300" alt="Backrooms Manager - Together"/>
-<br>
-
-**Release Date:** July 25, 2026  
-**Genre:** Co-op Survival Horror • Logistics • First-Person  
-**Status:** Early Access
-
-A **6-player co-op scavenging and logistics** game set in the terrifying Backrooms.
-
-- 🔍 Search dangerous sectors for valuable items  
-- 🔧 Break down junk into scrap and manage resources  
-- 🚚 Deliver shipments on time while managing team budget  
-- 🛠️ Upgrade abilities, equipment, and keep your balance positive  
-- 👥 Meet each quota and survive the unknown
-
-**Tags:** `Early Access` `Co-op` `Horror` `Survival` `FPS` `Psychological Horror` `Exploration` `Multiplayer`
-
-[▶️ **Wishlist on Steam**](https://store.steampowered.com/app/4895520/Backrooms_Manager__Together/)
-
-</div>
-
----
-
-<div align="center">
-
-## 🛠️ Our Tech Stack
-[![My Skills](https://simpleskill.icons.workers.dev/svg?i=steam,steamdb,davinciresolve,unrealengine,blender,spotify&theme=dark)](#)
-
-
-
-</div>
-
----
-
-<div align="center">
-
-## 👥 The Team
-
-| Role                    | Member(s)           |
-|-------------------------|---------------------|
-| **Studio Lead**         | Nyxtails            |
-| **Creative Director**   | Nyxzen              |
-| **Technical Director**  | Voidtails           |
-
-</div>
-
----
-
-<div align="center">
-
-## 📌 Connect With Us
-
-[![Discord](https://img.shields.io/badge/Discord-Join%20Us-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/nyxtails)
-[![YouTube](https://img.shields.io/badge/YouTube-Subscribe-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtube.com/@nyxtailsstudio)
-[![Steam](https://img.shields.io/badge/Steam-Follow%20Us-1B2838?style=for-the-badge&logo=steam&logoColor=white)](https://store.steampowered.com/developer/Nyxtails%20Studio)
-[![GitHub](https://img.shields.io/badge/GitHub-nyxtails--studio-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/nyxtails-studio)
-
-<br><br>
-
-**Made with ❤️ by Nyxtails Studio**  
-*Building the future of horror, one quota at a time.*
-
-</div>
+- Steam: [Backrooms Manager — Together](https://store.steampowered.com/app/4895520/Backrooms_Manager__Together/)
+- LinkedIn: [Nyxtails Studio](https://www.linkedin.com/company/135344316/admin/dashboard/)
+- Founders: [Melih Kaan Şahin](https://www.linkedin.com/in/melih-kaan-%C5%9Fahin-200800386/) · [Ahmet Esat K.](https://www.linkedin.com/in/ahmetesatk/)
+- YouTube: [Global](https://www.youtube.com/@nyxtails-studio) · [Türkçe](https://www.youtube.com/@nyxtails-studio-tr)
+- GitHub: [nyxtails-studio](https://github.com/nyxtails-studio)
+- Email: [nyxtails.studio@gmail.com](mailto:nyxtails.studio@gmail.com)
